@@ -1,0 +1,29 @@
+/* Base theme variables */
+:root {
+  --background: #ffffff;
+  --foreground: #1f1f1f; /* charcoal text */
+}
+
+/* Optional: respect system dark mode (same colors for now) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #121212;
+    --foreground: #f5f5f5;
+  }
+}
+
+/* Global styles */
+html,
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Paragraph indenting */
+article p {
+  text-indent: 1.5em;
+}
