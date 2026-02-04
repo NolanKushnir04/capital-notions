@@ -72,3 +72,40 @@ a {
     line-height: 1.6;
   }
 }
+/* =========================
+   Mobile layout hard fixes
+   ========================= */
+@media (max-width: 768px) {
+  /* NAVBAR FIX */
+  nav {
+    padding: 24px 16px !important;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  /* HERO / HEADER SECTIONS */
+  h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  h2,
+  h3 {
+    text-align: center;
+  }
+
+  /* IMAGES */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* GENERAL CONTAINERS */
+  section,
+  header,
+  main {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
