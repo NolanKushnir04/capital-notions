@@ -1,7 +1,7 @@
 ---
 title: Compass Pathways (CMPS) - Company Analysis
 description: This post is an informal company analysis of Compass Pathways.
-date: 2025-02-05
+date: 2025-02-06
 ---
 
 Welcome back for my second blog post, today's is an exciting one. This will mark my first company review, on one of my most optimistic holdings, Compass Pathways, ticker symbol CMPS. Please, do your own due diligence before blindly listening to anything you read here; however, if you do sense a little bias in this post, it is because I am extremely bullish on these guys. So, what is Compass Pathways? In recent years, the world of mental health care has seen a noteworthy shift towards more nuanced and innovative methods where traditional therapies have fallen short, to which I believe is warranted. The mental health of Canadians is three times worse than before the Covid-19 pandemic (Shelson, 2024). In any given year, 1-in-5 Canadians experience mental illness, and by the time Canadians are 40 years old, 1-in-2 either have, or have had a mental illness (CAMH). The company practically leading the charge in this mental health treatment revolution is Compass Pathways, a trailblazer in the emerging field of psychedelic-assisted therapy. 

@@ -22,6 +22,14 @@ export default async function ReportPage(
   const file = fs.readFileSync(filePath, "utf8");
   const { data, content } = matter(file);
 
+  const formattedDate = data.date
+  ? new Date(data.date).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    })
+  : null;
+
   const processed = await remark().use(html).process(content);
   const contentHtml = processed.toString();
 
@@ -41,6 +49,19 @@ return (
     </Link>
 
     <h1>{data.title}</h1>
+
+      {formattedDate && (
+  <p
+    style={{
+      fontSize: "0.9rem",
+      color: "#666",
+      marginTop: "8px",
+      marginBottom: "32px",
+    }}
+  >
+    {formattedDate}
+  </p>
+)}
 
     <article dangerouslySetInnerHTML={{ __html: contentHtml }} />
   </main>
