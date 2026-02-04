@@ -1,18 +1,14 @@
-/* Base theme variables */
+/* =========================
+   Base theme variables
+   ========================= */
 :root {
   --background: #ffffff;
-  --foreground: #1f1f1f; /* charcoal text */
+  --foreground: #1f1f1f;
 }
 
-/* Optional: respect system dark mode (same colors for now) */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #121212;
-    --foreground: #f5f5f5;
-  }
-}
-
-/* Global styles */
+/* =========================
+   Global styles
+   ========================= */
 html,
 body {
   background-color: var(--background);
@@ -23,18 +19,18 @@ body {
     "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* Paragraph indenting */
+/* Paragraph formatting */
 article p {
   text-indent: 1.5em;
 }
 
-/* Disable text selection and text cursor site-wide */
+/* Disable text selection site-wide */
 body {
   user-select: none;
   cursor: default;
 }
 
-/* Re-enable normal behavior for interactive elements */
+/* Re-enable interactive elements */
 input,
 textarea {
   user-select: text;
@@ -47,9 +43,11 @@ a {
 }
 
 /* =========================
-   Mobile-only layout tuning
+   MOBILE FIXES (DESKTOP SAFE)
    ========================= */
 @media (max-width: 768px) {
+
+  /* GLOBAL SCALE + SPACING */
   body {
     font-size: 0.92rem;
   }
@@ -59,39 +57,38 @@ a {
     padding-right: 16px;
   }
 
+  /* NAVBAR — single row, centered */
+  nav {
+    padding: 16px !important;
+    justify-content: center !important;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: nowrap;
+  }
+
+  nav a {
+    white-space: nowrap;
+  }
+
+  /* HOME / HEADERS SPACING */
   h1 {
     font-size: 1.8rem;
-    margin-bottom: 0.6em;
+    margin-top: 24px;
+    margin-bottom: 12px;
+    line-height: 1.2;
+    text-align: center;
   }
 
   h2 {
     font-size: 1.4rem;
-  }
-
-  p {
-    line-height: 1.6;
-  }
-}
-/* =========================
-   Mobile layout hard fixes
-   ========================= */
-@media (max-width: 768px) {
-  /* NAVBAR FIX */
-  nav {
-    padding: 24px 16px !important;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-
-  /* HERO / HEADER SECTIONS */
-  h1 {
-    font-size: 1.8rem;
+    margin-top: 16px;
+    margin-bottom: 8px;
     text-align: center;
   }
 
-  h2,
   h3 {
+    margin-top: 12px;
+    margin-bottom: 6px;
     text-align: center;
   }
 
@@ -101,7 +98,7 @@ a {
     height: auto;
   }
 
-  /* GENERAL CONTAINERS */
+  /* PREVENT SIDE SCROLL */
   section,
   header,
   main {
