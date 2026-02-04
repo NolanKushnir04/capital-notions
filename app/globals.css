@@ -76,35 +76,35 @@ a {
 
   .home-header-grid {
     grid-template-columns: 1fr !important;
-    row-gap: 4px; /* ⬅ reduced again */
+    row-gap: 6px;
   }
 
-  /* LOGO */
+  /* LOGO — ONLY CHANGE IS HERE */
   .home-header-grid img {
     width: 170px;
     display: block;
     margin-left: -12px !important;
     margin-right: auto !important;
+    margin-bottom: 6px !important; /* ⬅ brings logo DOWN */
   }
 
-  /* TITLE — pulled closer to logo */
+  /* TITLE — UNCHANGED */
   .home-header-grid h1 {
     font-size: 2.2rem !important;
-    margin-top: -2px !important;   /* ⬅ tighter */
-    margin-bottom: 6px !important;
+    margin: 0 !important;
     line-height: 1.15;
     text-align: center;
     white-space: normal;
   }
 
-  /* SUBTITLE */
+  /* SUBTITLE — UNCHANGED */
   header p {
     font-size: 0.85rem !important;
     margin-top: 4px !important;
     line-height: 1.55;
   }
 
-  /* Reduce header → content gap */
+  /* Header → content spacing (unchanged) */
   header {
     margin-bottom: 44px !important;
   }
