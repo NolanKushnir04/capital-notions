@@ -35,7 +35,7 @@ export default function RootLayout({
     padding: "48px 248px",
     display: "flex",
     justifyContent: "flex-end",
-    gap: "48px",
+    gap: "24px",
     fontSize: "1rem",
     boxSizing: "border-box",
     }}
