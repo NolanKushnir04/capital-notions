@@ -14,7 +14,7 @@ export default function SubscribePage() {
         maxWidth: 620,
         margin: "120px auto",
         padding: "0 16px",
-        fontFamily: "system-ui, -apple-system, BlinkMacSystemFont"
+        fontFamily: "Roboto, system-ui, sans-serif",
       }}
     >
       {/* Header */}
