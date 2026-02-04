@@ -43,13 +43,14 @@ a {
 }
 
 /* =========================
-   MOBILE FIXES (DESKTOP SAFE)
+   MOBILE FIXES ONLY
+   (DESKTOP COMPLETELY UNTOUCHED)
    ========================= */
 @media (max-width: 768px) {
 
-  /* GLOBAL SCALE */
+  /* GLOBAL MOBILE SCALE DOWN */
   body {
-    font-size: 0.92rem;
+    font-size: 0.88rem; /* shrink everything slightly */
   }
 
   main {
@@ -57,7 +58,7 @@ a {
     padding-right: 16px;
   }
 
-  /* NAVBAR — single row */
+  /* NAVBAR */
   nav {
     padding: 16px !important;
     justify-content: center !important;
@@ -71,39 +72,41 @@ a {
   }
 
   /* =========================
-     HOME HEADER LAYOUT
+     HOME HEADER
      ========================= */
 
   .home-header-grid {
     grid-template-columns: 1fr !important;
-    row-gap: 8px; /* ↓ reduces logo → title spacing */
+    row-gap: 6px; /* ~50% less logo → title space */
   }
 
-  /* LOGO — move LEFT */
+  /* LOGO — slightly MORE left */
   .home-header-grid img {
+    width: 170px;
     display: block;
-    width: 180px;
-    margin-left: 0 !important;
-    margin-right: auto !important; /* ← anchors to left */
+    margin-left: -12px !important; /* push left */
+    margin-right: auto !important;
   }
 
-  /* TITLE — pull closer to logo */
+  /* TITLE — smaller, tighter */
   .home-header-grid h1 {
-    margin-top: 0 !important;
-    margin-bottom: 8px !important; /* ↓ 50% less space */
+    font-size: 2.2rem !important; /* SHRUNK */
+    margin: 0 !important;
+    line-height: 1.15;
     text-align: center;
     white-space: normal;
   }
 
-  /* SUBTITLE — pull upward */
+  /* SUBTITLE — smaller */
   header p {
-    margin-top: 0 !important;
-    line-height: 1.6;
+    font-size: 0.85rem !important;
+    margin-top: 4px !important;
+    line-height: 1.55;
   }
 
   /* Reduce header → content gap */
   header {
-    margin-bottom: 48px !important;
+    margin-bottom: 44px !important;
   }
 
   /* =========================
@@ -111,9 +114,21 @@ a {
      ========================= */
 
   section h2 {
-    margin-top: 40px !important; /* ↓ 50% less space */
-    margin-bottom: 20px !important;
-    text-align: center;
+    font-size: 1.35rem !important; /* shrunk again */
+    margin-top: 36px !important;
+    margin-bottom: 18px !important;
+  }
+
+  section h3 {
+    font-size: 1rem !important;
+  }
+
+  section p {
+    font-size: 0.82rem !important;
+  }
+
+  section span {
+    font-size: 0.82rem !important;
   }
 
   /* IMAGES */
