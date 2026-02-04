@@ -44,13 +44,12 @@ a {
 
 /* =========================
    MOBILE FIXES ONLY
-   (DESKTOP COMPLETELY UNTOUCHED)
    ========================= */
 @media (max-width: 768px) {
 
-  /* GLOBAL MOBILE SCALE DOWN */
+  /* GLOBAL MOBILE SCALE */
   body {
-    font-size: 0.88rem; /* shrink everything slightly */
+    font-size: 0.88rem;
   }
 
   main {
@@ -77,27 +76,28 @@ a {
 
   .home-header-grid {
     grid-template-columns: 1fr !important;
-    row-gap: 6px; /* ~50% less logo → title space */
+    row-gap: 4px; /* ⬅ reduced again */
   }
 
-  /* LOGO — slightly MORE left */
+  /* LOGO */
   .home-header-grid img {
     width: 170px;
     display: block;
-    margin-left: -12px !important; /* push left */
+    margin-left: -12px !important;
     margin-right: auto !important;
   }
 
-  /* TITLE — smaller, tighter */
+  /* TITLE — pulled closer to logo */
   .home-header-grid h1 {
-    font-size: 2.2rem !important; /* SHRUNK */
-    margin: 0 !important;
+    font-size: 2.2rem !important;
+    margin-top: -2px !important;   /* ⬅ tighter */
+    margin-bottom: 6px !important;
     line-height: 1.15;
     text-align: center;
     white-space: normal;
   }
 
-  /* SUBTITLE — smaller */
+  /* SUBTITLE */
   header p {
     font-size: 0.85rem !important;
     margin-top: 4px !important;
@@ -114,7 +114,7 @@ a {
      ========================= */
 
   section h2 {
-    font-size: 1.35rem !important; /* shrunk again */
+    font-size: 1.35rem !important;
     margin-top: 36px !important;
     margin-bottom: 18px !important;
   }
