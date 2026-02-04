@@ -39,62 +39,62 @@ export default function Home() {
       }}
     >
       {/* Header */}
-<header style={{ marginBottom: "100px" }}>
-  <div
-    style={{
-      display: "grid",
-      gridTemplateColumns: "1fr auto 1fr",
-      alignItems: "center",
-      marginBottom: "0px",
-    }}
-  >
-    {/* Left: Logo */}
-    <div style={{ justifySelf: "start", marginLeft: "70px" }}>
-      <img
-        src="/logo.png"
-        alt="Capital Notions logo"
-        style={{ width: "216px" }} // logo size
-      />
-    </div>
+      <header style={{ marginBottom: "100px" }}>
+        <div
+          className="home-header-grid"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr auto 1fr",
+            alignItems: "center",
+            marginBottom: "0px",
+          }}
+        >
+          {/* Left: Logo */}
+          <div style={{ justifySelf: "start", marginLeft: "70px" }}>
+            <img
+              src="/logo.png"
+              alt="Capital Notions logo"
+              style={{ width: "216px" }}
+            />
+          </div>
 
-    {/* Center: Title */}
-<h1
-  style={{
-    fontFamily: "Roboto, system-ui, sans-serif",
-    fontSize: "3.1rem",
-    fontWeight: 500,
-    letterSpacing: "-0.02em",
-    margin: 0,
-  }}
->
-  Capital Notions
-</h1>
+          {/* Center: Title */}
+          <h1
+            style={{
+              fontFamily: "Roboto, system-ui, sans-serif",
+              fontSize: "3.1rem",
+              fontWeight: 500,
+              letterSpacing: "-0.02em",
+              margin: 0,
+            }}
+          >
+            Capital Notions
+          </h1>
 
-    {/* Right: empty spacer to keep title centered */}
-    <div />
-  </div>
+          {/* Right spacer */}
+          <div />
+        </div>
 
-  {/* Subtitle */}
-  <p
-    style={{
-      fontFamily: "Roboto, system-ui, sans-serif",
-    fontSize: "1.15rem",
-    lineHeight: 1.7,
-    maxWidth: "725px",
-    marginTop: "-18px",     // brings it UP
-    marginLeft: "auto",
-    marginRight: "auto",
-    marginBottom: "0",
-    textAlign: "center",
-  }}
-  >
-    Capital Notions is an independent research platform 
-    focused on value-driven investment analysis and 
-    market commentary. Our work emphasizes deep equity research, 
-    disciplined valuation, and thoughtful discussion of news,
-    risk, and opportunity. 
-  </p>
-</header>
+        {/* Subtitle */}
+        <p
+          style={{
+            fontFamily: "Roboto, system-ui, sans-serif",
+            fontSize: "1.15rem",
+            lineHeight: 1.7,
+            maxWidth: "725px",
+            marginTop: "-18px",
+            marginLeft: "auto",
+            marginRight: "auto",
+            marginBottom: "0",
+            textAlign: "center",
+          }}
+        >
+          Capital Notions is an independent research platform focused on
+          value-driven investment analysis and market commentary. Our work
+          emphasizes deep equity research, disciplined valuation, and thoughtful
+          discussion of news, risk, and opportunity.
+        </p>
+      </header>
 
       {/* Latest post preview */}
       <section>
@@ -107,7 +107,7 @@ export default function Home() {
             fontWeight: 500,
           }}
         >
-          ↓ Latest Research Report ↓ 
+          ↓ Latest Research Report ↓
         </h2>
 
         <a

@@ -70,25 +70,19 @@ a {
     white-space: nowrap;
   }
 
-  /* HOME / HEADERS SPACING */
-  h1 {
-    font-size: 1.8rem;
-    margin-top: 24px;
-    margin-bottom: 12px;
-    line-height: 1.2;
-    text-align: center;
+  /* === HOME HEADER GRID FIX === */
+  .home-header-grid {
+    grid-template-columns: 1fr !important;
+    row-gap: 24px;
   }
 
-  h2 {
-    font-size: 1.4rem;
-    margin-top: 16px;
-    margin-bottom: 8px;
-    text-align: center;
+  .home-header-grid img {
+    margin-left: 0 !important;
+    justify-self: center !important;
   }
 
-  h3 {
-    margin-top: 12px;
-    margin-bottom: 6px;
+  .home-header-grid h1 {
+    white-space: normal;
     text-align: center;
   }
 
