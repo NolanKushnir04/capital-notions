@@ -1,7 +1,7 @@
 ---
 title: COMPASS PATHWAYS PLC - Equity Research Report
 description: Full Equity Research Initiation Report on Compass Pathways Plc
-date: 2025-12-11
+date: 2025-12-10
 ---
 
 ![Alt text](/images/cmps-er.jpeg)
