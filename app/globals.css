@@ -60,6 +60,7 @@ a {
   /* NAVBAR */
   nav {
     padding: 16px !important;
+    margin-bottom: -12px !important;
     justify-content: center !important;
     align-items: center;
     gap: 16px;
@@ -86,6 +87,7 @@ a {
     margin-left: -12px !important;
     margin-right: auto !important;
     margin-bottom: -66px !important; /* ⬅ brings logo DOWN */
+    margin-top: 12px !important;
   }
 
   /* TITLE */
