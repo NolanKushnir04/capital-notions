@@ -27,3 +27,21 @@ body {
 article p {
   text-indent: 1.5em;
 }
+
+/* Disable text selection and text cursor site-wide */
+body {
+  user-select: none;
+  cursor: default;
+}
+
+/* Re-enable normal behavior for interactive elements */
+input,
+textarea {
+  user-select: text;
+  cursor: text;
+}
+
+button,
+a {
+  cursor: pointer;
+}
