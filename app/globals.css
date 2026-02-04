@@ -45,3 +45,30 @@ button,
 a {
   cursor: pointer;
 }
+
+/* =========================
+   Mobile-only layout tuning
+   ========================= */
+@media (max-width: 768px) {
+  body {
+    font-size: 0.92rem;
+  }
+
+  main {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.6em;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    line-height: 1.6;
+  }
+}
