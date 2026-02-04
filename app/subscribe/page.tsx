@@ -21,9 +21,9 @@ export default function SubscribePage() {
       <header style={{ marginBottom: 32 }}>
         <h1
           style={{
-            fontSize: 28,
+            fontSize: 24,
             fontWeight: 600,
-            marginBottom: 8,
+            marginBottom: 28,
             letterSpacing: "-0.02em"
           }}
         >
