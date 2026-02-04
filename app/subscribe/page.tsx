@@ -23,7 +23,7 @@ export default function SubscribePage() {
           style={{
             fontSize: 24,
             fontWeight: 600,
-            marginBottom: 28,
+            marginBottom: 16,
             letterSpacing: "-0.02em"
           }}
         >
@@ -112,6 +112,7 @@ export default function SubscribePage() {
 const inputStyle: React.CSSProperties = {
   width: "100%",
   padding: "10px 12px",
+  marginTop: -8,
   fontSize: 14,
   borderRadius: 6,
   border: "1px solid #d0d5dd",
