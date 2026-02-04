@@ -1,6 +1,11 @@
 import "./globals.css";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Capital Notions",
+  viewport: "width=device-width, initial-scale=1",
+};
+
 export default function RootLayout({
   children,
 }: {
