@@ -47,7 +47,7 @@ a {
    ========================= */
 @media (max-width: 768px) {
 
-  /* GLOBAL SCALE + SPACING */
+  /* GLOBAL SCALE */
   body {
     font-size: 0.92rem;
   }
@@ -57,7 +57,7 @@ a {
     padding-right: 16px;
   }
 
-  /* NAVBAR — single row, centered */
+  /* NAVBAR — single row */
   nav {
     padding: 16px !important;
     justify-content: center !important;
@@ -70,20 +70,65 @@ a {
     white-space: nowrap;
   }
 
-  /* === HOME HEADER GRID FIX === */
+  /* =========================
+     HOME HEADER LAYOUT
+     ========================= */
+
   .home-header-grid {
     grid-template-columns: 1fr !important;
-    row-gap: 24px;
+    row-gap: 12px;
   }
 
+  /* Logo: slightly left, not centered */
   .home-header-grid img {
-    margin-left: 0 !important;
-    justify-self: center !important;
+    display: block;
+    margin-left: 24px !important;
+    margin-right: auto;
+    width: 180px;
   }
 
+  /* Title */
   .home-header-grid h1 {
-    white-space: normal;
+    font-size: 2.4rem !important; /* ~22% smaller */
+    margin-top: 0 !important;
+    margin-bottom: 12px !important;
     text-align: center;
+    white-space: normal;
+  }
+
+  /* Subtitle */
+  header p {
+    font-size: 0.9rem !important;
+    line-height: 1.6;
+    margin-top: 0 !important;
+  }
+
+  /* Reduce header → content gap */
+  header {
+    margin-bottom: 48px !important;
+  }
+
+  /* =========================
+     LATEST REPORT SECTION
+     ========================= */
+
+  section h2 {
+    font-size: 1.45rem !important; /* extra ~10% smaller */
+    margin-top: 40px !important;
+    margin-bottom: 20px !important;
+    text-align: center;
+  }
+
+  section h3 {
+    font-size: 1.05rem !important;
+  }
+
+  section p {
+    font-size: 0.85rem !important;
+  }
+
+  section span {
+    font-size: 0.85rem !important;
   }
 
   /* IMAGES */
@@ -98,38 +143,5 @@ a {
   main {
     max-width: 100%;
     overflow-x: hidden;
-  }
-}
-
-/* =========================
-   FINAL HOME MOBILE POLISH
-   ========================= */
-@media (max-width: 768px) {
-
-  /* Center home logo */
-  .home-header-grid img {
-    display: block;
-    margin: 0 auto !important;
-  }
-
-  /* Shrink ALL home text ~22% */
-  .home-header-grid h1 {
-    font-size: 2.4rem !important; /* ~22% smaller than 3.1rem */
-  }
-
-  header p {
-    font-size: 0.9rem !important;
-  }
-
-  section h2 {
-    font-size: 1.6rem !important;
-  }
-
-  section h3 {
-    font-size: 1.15rem !important;
-  }
-
-  section p {
-    font-size: 0.9rem !important;
   }
 }
