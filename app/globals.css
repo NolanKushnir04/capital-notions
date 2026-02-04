@@ -79,7 +79,7 @@ a {
     row-gap: 6px;
   }
 
-  /* LOGO — ONLY CHANGE IS HERE */
+  /* LOGO — */
   .home-header-grid img {
     width: 170px;
     display: block;
@@ -88,7 +88,7 @@ a {
     margin-bottom: -66px !important; /* ⬅ brings logo DOWN */
   }
 
-  /* TITLE — UNCHANGED */
+  /* TITLE */
   .home-header-grid h1 {
     font-size: 2.2rem !important;
     margin: 0px !important;
@@ -97,7 +97,7 @@ a {
     white-space: normal;
   }
 
-  /* SUBTITLE — UNCHANGED */
+  /* SUBTITLE */
   header p {
     font-size: 0.85rem !important;
     margin-top: 4px !important;
@@ -105,7 +105,7 @@ a {
     line-height: 1.55;
   }
 
-  /* Header → content spacing (unchanged) */
+  /* Header → content spacing */
   header {
     margin-bottom: 44px !important;
   }
