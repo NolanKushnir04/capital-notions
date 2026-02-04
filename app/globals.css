@@ -85,13 +85,13 @@ a {
     display: block;
     margin-left: -12px !important;
     margin-right: auto !important;
-    margin-bottom: 6px !important; /* ⬅ brings logo DOWN */
+    margin-bottom: -66px !important; /* ⬅ brings logo DOWN */
   }
 
   /* TITLE — UNCHANGED */
   .home-header-grid h1 {
     font-size: 2.2rem !important;
-    margin: 0 !important;
+    margin: 0px !important;
     line-height: 1.15;
     text-align: center;
     white-space: normal;
@@ -101,6 +101,7 @@ a {
   header p {
     font-size: 0.85rem !important;
     margin-top: 4px !important;
+    margin-bottom: 0px !important;
     line-height: 1.55;
   }
 
@@ -115,7 +116,7 @@ a {
 
   section h2 {
     font-size: 1.35rem !important;
-    margin-top: 36px !important;
+    margin-top: 8px !important;
     margin-bottom: 18px !important;
   }
 
