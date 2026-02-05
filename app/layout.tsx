@@ -35,7 +35,7 @@ export default function RootLayout({
     padding: "48px 248px",
     display: "flex",
     justifyContent: "flex-end",
-    gap: "26px",
+    gap: "18px",
     fontSize: "1rem",
     boxSizing: "border-box",
     }}
@@ -56,7 +56,7 @@ export default function RootLayout({
   {/* Footer (anchored bottom) */}
   <footer
     style={{
-      marginTop: "auto",
+      marginTop: "32px",
       padding: "20px 0",
       textAlign: "center",
       fontFamily: "Roboto, system-ui, sans-serif",
