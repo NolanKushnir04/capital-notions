@@ -64,7 +64,7 @@ export default function AboutPage() {
           }}
         >
           <img
-            src="/team/nolan-kushnir2.jpeg"
+            src="/team/nolan-kushnir3.jpeg"
             alt="Nolan Kushnir"
             style={{
               width: "260px",
@@ -161,7 +161,7 @@ export default function AboutPage() {
         </div>
 
         {/* Add more team members by duplicating the block above */}
-        
+
       </div>
     </main>
   );
