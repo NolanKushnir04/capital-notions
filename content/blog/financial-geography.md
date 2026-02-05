@@ -21,6 +21,3 @@ Listen, all in all the reality is some people may directly fall in profiles A-D,
 As always, thank you all very much for reading. I hope you learned something new and started turning the gears on thinking about a topic you haven't given much thought yet. Be sure to tune back in on March 26th for my next post, most likely another company analysis, or potential ETF analysis... 
 
 •	Nolan Kushnir
-
-**Citations**
-
