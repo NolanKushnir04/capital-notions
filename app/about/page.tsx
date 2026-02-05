@@ -103,7 +103,7 @@ export default function AboutPage() {
               opacity: 0.8,
             }}
           >
-            Nolan leads all Equity Research, Financial Modelling, 
+            Nolan is the head of all Equity Research, Financial Modelling, 
             Valuations and Risk Analyses. 
           </p>
         </div>
@@ -116,8 +116,8 @@ export default function AboutPage() {
           }}
         >
           <img
-            src="/team/fake-kushnir.jpeg"
-            alt="Second Member"
+            src="/team/nicolas-liang.jpeg"
+            alt="Nicolas Liang"
             style={{
               width: "260px",
               height: "300px",
@@ -135,7 +135,7 @@ export default function AboutPage() {
               marginBottom: "6px",
             }}
           >
-            Member 2
+            Nicolas Liang
           </h3>
 
           <p
@@ -145,7 +145,7 @@ export default function AboutPage() {
                 marginBottom: "6px",
             }}
             >
-            Position
+            Research Analyst Lead
             </p>
 
           <p
@@ -155,62 +155,13 @@ export default function AboutPage() {
               opacity: 0.8,
             }}
           >
-            Expertise
-          </p>
-        </div>
-
-        {/* Team Member 3 */}
-        <div
-          style={{
-            width: "260px",
-            textAlign: "center",
-          }}
-        >
-          <img
-            src="/team/fake-kushnir.jpeg"
-            alt="Third Member"
-            style={{
-              width: "260px",
-              height: "300px",
-              objectFit: "cover",
-              borderRadius: "8px",
-              marginBottom: "14px",
-              marginTop: "-8px",
-            }}
-          />
-
-          <h3
-            style={{
-              fontSize: "1.2rem",
-              fontWeight: 500,
-              marginBottom: "6px",
-            }}
-          >
-            Member 3
-          </h3>
-
-          <p
-            style={{
-                fontSize: "0.95rem",
-                fontWeight: 500,
-                marginBottom: "6px",
-            }}
-            >
-            Position
-            </p>
-
-          <p
-            style={{
-              fontSize: "0.95rem",
-              lineHeight: 1.5,
-              opacity: 0.8,
-            }}
-          >
-            Expertise
+            Nicolas is the analyst lead and specializes in 
+            Equity Research, Valuations and Market Commentary.
           </p>
         </div>
 
         {/* Add more team members by duplicating the block above */}
+        
       </div>
     </main>
   );
