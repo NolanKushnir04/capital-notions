@@ -1,5 +1,6 @@
 import "./globals.css";
 import Link from "next/link";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   title: "Capital Notions",
@@ -80,7 +81,8 @@ export default function RootLayout({
       +1 (647) 966-9851
     </a>
   </footer>
-</body>
+  <Analytics />
+    </body>
     </html>
   );
 }
