@@ -64,7 +64,7 @@ export default function AboutPage() {
           }}
         >
           <img
-            src="/team/nolan-kushnir3.jpeg"
+            src="/team/nolan_kushnir4.jpeg"
             alt="Nolan Kushnir"
             style={{
               width: "260px",
@@ -157,6 +157,58 @@ export default function AboutPage() {
           >
             Nicolas is the analyst lead and specializes in 
             Equity Research, Valuations and Market Commentary.
+          </p>
+        </div>
+
+        {/* Team Member 3 */}
+        <div
+          style={{
+            width: "260px",
+            textAlign: "center",
+          }}
+        >
+          <img
+            src="/team/Tim_Sorochkin.jpeg"
+            alt="Tim Sorochkin"
+            style={{
+              width: "260px",
+              height: "300px",
+              objectFit: "cover",
+              borderRadius: "8px",
+              marginBottom: "14px",
+              marginTop: "-8px",
+            }}
+          />
+
+          <h3
+            style={{
+              fontSize: "1.2rem",
+              fontWeight: 500,
+              marginBottom: "6px",
+            }}
+          >
+            Tim Sorochkin
+          </h3>
+
+          <p
+            style={{
+                fontSize: "0.95rem",
+                fontWeight: 500,
+                marginBottom: "6px",
+            }}
+            >
+            Equity Research Analyst
+            </p>
+
+          <p
+            style={{
+              fontSize: "0.95rem",
+              lineHeight: 1.5,
+              opacity: 0.8,
+            }}
+          >
+            Tim is a quantatative equity analyst, he specializes in 
+            Quantatative Research and Risk Analyses.
           </p>
         </div>
 
