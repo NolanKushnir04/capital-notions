@@ -212,6 +212,58 @@ export default function AboutPage() {
           </p>
         </div>
 
+        {/* Team Member 4 */}
+        <div
+          style={{
+            width: "260px",
+            textAlign: "center",
+          }}
+        >
+          <img
+            src="/team/Linda.jpeg"
+            alt="Tim Sorochkin"
+            style={{
+              width: "260px",
+              height: "300px",
+              objectFit: "cover",
+              borderRadius: "8px",
+              marginBottom: "14px",
+              marginTop: "-8px",
+            }}
+          />
+
+          <h3
+            style={{
+              fontSize: "1.2rem",
+              fontWeight: 500,
+              marginBottom: "6px",
+            }}
+          >
+            Yiwen Xu
+          </h3>
+
+          <p
+            style={{
+                fontSize: "0.95rem",
+                fontWeight: 500,
+                marginBottom: "6px",
+            }}
+            >
+            Equity Research Analyst
+            </p>
+
+          <p
+            style={{
+              fontSize: "0.95rem",
+              lineHeight: 1.5,
+              opacity: 0.8,
+            }}
+          >
+            Yiwen is a quantatative equity analyst, she specializes in 
+            Quantatative Research and Risk Analyses.
+          </p>
+        </div>
+
         {/* Add more team members by duplicating the block above */}
 
       </div>
