@@ -6,7 +6,7 @@ date: 2026-02-25
 
 ![Alt text](/images/klarna-photo.jpeg)
 
-*As of February 20: Shares down 71.25% since IPO Revenue up 24–30% year-on-year as reported in its most recent results*
+*As of February 20: Shares down 71.25% since IPO. Revenue up 24–30% year-on-year as reported in its most recent earnings*
 
 **What is Buy Now, Pay Later?**
 
