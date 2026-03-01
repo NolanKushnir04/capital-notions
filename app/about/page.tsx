@@ -64,7 +64,7 @@ export default function AboutPage() {
           }}
         >
           <img
-            src="/team/nolan_kushnir4.jpeg"
+            src="/team/nolan_kushnir6.jpeg"
             alt="Nolan Kushnir"
             style={{
               width: "260px",
@@ -221,7 +221,7 @@ export default function AboutPage() {
         >
           <img
             src="/team/Linda.jpeg"
-            alt="Tim Sorochkin"
+            alt="Yiwen"
             style={{
               width: "260px",
               height: "300px",
