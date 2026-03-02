@@ -239,7 +239,7 @@ export default function AboutPage() {
               marginBottom: "6px",
             }}
           >
-            Yiwen Xu
+            Linda Xu
           </h3>
 
           <p
@@ -259,7 +259,7 @@ export default function AboutPage() {
               opacity: 0.8,
             }}
           >
-            Yiwen is an Equity Analyst, she specializes in 
+            Linda is an Equity Analyst, she specializes in 
             Quantitative Research and Risk Analyses.
           </p>
         </div>
@@ -343,7 +343,7 @@ export default function AboutPage() {
               marginBottom: "6px",
             }}
           >
-            Yifan Cao
+            Charlie Cao
           </h3>
 
           <p
@@ -363,7 +363,7 @@ export default function AboutPage() {
               opacity: 0.8,
             }}
           >
-            Yifan is an Equity Analyst, he specializes in 
+            Charlie is an Equity Analyst, he specializes in 
             Quantitative Research and Market Research.
           </p>
         </div>
