@@ -103,7 +103,7 @@ export default function AboutPage() {
               opacity: 0.8,
             }}
           >
-            Nolan is the head of all Equity Research, Financial Modelling, 
+            Nolan is the Head of all Equity Research, Financial Modelling, 
             Valuations and Risk Analyses. 
           </p>
         </div>
@@ -155,7 +155,7 @@ export default function AboutPage() {
               opacity: 0.8,
             }}
           >
-            Nicolas is the analyst lead and specializes in 
+            Nicolas is the Analyst Lead and specializes in 
             Equity Research, Valuations and Market Commentary.
           </p>
         </div>
@@ -207,8 +207,8 @@ export default function AboutPage() {
               opacity: 0.8,
             }}
           >
-            Tim is an equity analyst, he specializes in 
-            Quantatative Research and Risk Analyses.
+            Tim is an Equity Analyst, he specializes in 
+            Quantitative Research and Risk Analyses.
           </p>
         </div>
 
@@ -259,12 +259,64 @@ export default function AboutPage() {
               opacity: 0.8,
             }}
           >
-            Yiwen is an equity analyst, she specializes in 
-            Quantatative Research and Risk Analyses.
+            Yiwen is an Equity Analyst, she specializes in 
+            Quantitative Research and Risk Analyses.
           </p>
         </div>
 
         {/* Team Member 5 */}
+        <div
+          style={{
+            width: "260px",
+            textAlign: "center",
+          }}
+        >
+          <img
+            src="/team/Cameron.jpeg"
+            alt="Cameron"
+            style={{
+              width: "260px",
+              height: "300px",
+              objectFit: "cover",
+              borderRadius: "8px",
+              marginBottom: "14px",
+              marginTop: "-8px",
+            }}
+          />
+
+          <h3
+            style={{
+              fontSize: "1.2rem",
+              fontWeight: 500,
+              marginBottom: "6px",
+            }}
+          >
+            Cameron Ogan
+          </h3>
+
+          <p
+            style={{
+                fontSize: "0.95rem",
+                fontWeight: 500,
+                marginBottom: "6px",
+            }}
+            >
+            Equity Research Analyst
+            </p>
+
+          <p
+            style={{
+              fontSize: "0.95rem",
+              lineHeight: 1.5,
+              opacity: 0.8,
+            }}
+          >
+            Cameron is an Equity Analyst, he specializes in 
+            Qualatative Research and Market Research.
+          </p>
+        </div>
+
+        {/* Team Member 6 */}
         <div
           style={{
             width: "260px",
@@ -311,8 +363,112 @@ export default function AboutPage() {
               opacity: 0.8,
             }}
           >
-            Yifan is an equity analyst, he specializes in 
-            Quantatative Research and Market Research.
+            Yifan is an Equity Analyst, he specializes in 
+            Quantitative Research and Market Research.
+          </p>
+        </div>
+
+        {/* Team Member 7 */}
+        <div
+          style={{
+            width: "260px",
+            textAlign: "center",
+          }}
+        >
+          <img
+            src="/team/Roxanne.jpeg"
+            alt="Roxanne"
+            style={{
+              width: "260px",
+              height: "300px",
+              objectFit: "cover",
+              borderRadius: "8px",
+              marginBottom: "14px",
+              marginTop: "-8px",
+            }}
+          />
+
+          <h3
+            style={{
+              fontSize: "1.2rem",
+              fontWeight: 500,
+              marginBottom: "6px",
+            }}
+          >
+            Roxanne Zhu
+          </h3>
+
+          <p
+            style={{
+                fontSize: "0.95rem",
+                fontWeight: 500,
+                marginBottom: "6px",
+            }}
+            >
+            Brand Strategist
+            </p>
+
+          <p
+            style={{
+              fontSize: "0.95rem",
+              lineHeight: 1.5,
+              opacity: 0.8,
+            }}
+          >
+            Roxanne is a Brand Strategist, she specializes in
+            Brand Positioning, Graphic Design and Social Media.
+          </p>
+        </div>
+
+        {/* Team Member 8 */}
+        <div
+          style={{
+            width: "260px",
+            textAlign: "center",
+          }}
+        >
+          <img
+            src="/team/Ayaan.jpeg"
+            alt="Ayaan"
+            style={{
+              width: "260px",
+              height: "300px",
+              objectFit: "cover",
+              borderRadius: "8px",
+              marginBottom: "14px",
+              marginTop: "-8px",
+            }}
+          />
+
+          <h3
+            style={{
+              fontSize: "1.2rem",
+              fontWeight: 500,
+              marginBottom: "6px",
+            }}
+          >
+            Ayaan Adnan
+          </h3>
+
+          <p
+            style={{
+                fontSize: "0.95rem",
+                fontWeight: 500,
+                marginBottom: "6px",
+            }}
+            >
+            Brand Strategist
+            </p>
+
+          <p
+            style={{
+              fontSize: "0.95rem",
+              lineHeight: 1.5,
+              opacity: 0.8,
+            }}
+          >
+            Ayaan is a Brand Strategist, he specializes in
+            Brand Positioning, Graphic Design and Social Media.
           </p>
         </div>
 
