@@ -207,7 +207,7 @@ export default function AboutPage() {
               opacity: 0.8,
             }}
           >
-            Tim is a quantatative equity analyst, he specializes in 
+            Tim is an equity analyst, he specializes in 
             Quantatative Research and Risk Analyses.
           </p>
         </div>
@@ -259,8 +259,60 @@ export default function AboutPage() {
               opacity: 0.8,
             }}
           >
-            Yiwen is a quantatative equity analyst, she specializes in 
+            Yiwen is an equity analyst, she specializes in 
             Quantatative Research and Risk Analyses.
+          </p>
+        </div>
+
+        {/* Team Member 5 */}
+        <div
+          style={{
+            width: "260px",
+            textAlign: "center",
+          }}
+        >
+          <img
+            src="/team/Charlie.jpeg"
+            alt="Charlie"
+            style={{
+              width: "260px",
+              height: "300px",
+              objectFit: "cover",
+              borderRadius: "8px",
+              marginBottom: "14px",
+              marginTop: "-8px",
+            }}
+          />
+
+          <h3
+            style={{
+              fontSize: "1.2rem",
+              fontWeight: 500,
+              marginBottom: "6px",
+            }}
+          >
+            Yifan Cao
+          </h3>
+
+          <p
+            style={{
+                fontSize: "0.95rem",
+                fontWeight: 500,
+                marginBottom: "6px",
+            }}
+            >
+            Equity Research Analyst
+            </p>
+
+          <p
+            style={{
+              fontSize: "0.95rem",
+              lineHeight: 1.5,
+              opacity: 0.8,
+            }}
+          >
+            Yifan is an equity analyst, he specializes in 
+            Quantatative Research and Market Research.
           </p>
         </div>
 
