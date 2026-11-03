@@ -93,7 +93,7 @@ export default function AboutPage() {
                 marginBottom: "6px",
             }}
             >
-            Founder & Head of Research
+            Founder & Head of Investment Research
             </p>
 
           <p

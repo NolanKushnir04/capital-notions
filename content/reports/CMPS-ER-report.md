@@ -5,7 +5,7 @@ date: 2025-12-10
 ---
 
 ![Alt text](/images/cmps-er.jpeg)
-*Nolan's Investment Notion released our first coverage on CMPS back in the beginning of February 2025 with a bullish, informal company analysis titled "Compass Pathways (CMPS) - Company Analysis", when CMPS was trading around ~$4.5 USD. CMPS is now trading at ~$6.5 USD as of today, marking a ~31% increase since our first public coverage. This equity research initiation report marks the official formal coverage of Compass Pathways Plc by Capital Notions.*
+*Nolan's Investment Notion released our first coverage on CMPS back in the beginning of February 2025 with a bullish, informal company analysis titled "Compass Pathways (CMPS) - Company Analysis", when CMPS was trading around ~$4.5 USD. CMPS is now trading at ~$6.5 USD as of today, marking a ~44% increase since our first public coverage. This equity research initiation report marks the official formal coverage of Compass Pathways Plc by Capital Notions.*
 
 **Executive Summary:**
 
