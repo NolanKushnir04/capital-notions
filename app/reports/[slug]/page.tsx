@@ -1,68 +1,26 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import { remark } from "remark";
-import html from "remark-html";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Link from "next/link";
+import Article from "@/app/components/Article";
+import { getAllEntries, getEntry } from "@/app/lib/content";
 
-const REPORTS_PATH = path.join(process.cwd(), "content/reports");
+type Props = { params: Promise<{ slug: string }> };
 
-export default async function ReportPage(
-  props: { params: Promise<{ slug: string }> }
-) {
-  const { slug } = await props.params;
+// Pre-build every report page at deploy time.
+export function generateStaticParams() {
+  return getAllEntries("reports").map((entry) => ({ slug: entry.slug }));
+}
 
-  const filePath = path.join(REPORTS_PATH, `${slug}.md`);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const entry = await getEntry("reports", slug);
+  if (!entry) return {};
+  return { title: entry.title, description: entry.description };
+}
 
-  if (!fs.existsSync(filePath)) {
-    notFound();
-  }
+export default async function ReportPage({ params }: Props) {
+  const { slug } = await params;
+  const entry = await getEntry("reports", slug);
+  if (!entry) notFound();
 
-  const file = fs.readFileSync(filePath, "utf8");
-  const { data, content } = matter(file);
-
-  const formattedDate = data.date
-  ? new Date(data.date).toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    })
-  : null;
-
-  const processed = await remark().use(html).process(content);
-  const contentHtml = processed.toString();
-
-return (
-  <main style={{ maxWidth: 720, margin: "80px auto" }}>
-    <Link
-      href="/reports"
-      style={{
-        display: "inline-block",
-        marginBottom: "24px",
-        fontSize: "14px",
-        textDecoration: "none",
-        color: "#555",
-      }}
-    >
-      ← Back to reports
-    </Link>
-
-    <h1>{data.title}</h1>
-
-      {formattedDate && (
-  <p
-    style={{
-      fontSize: "0.9rem",
-      color: "#666",
-      marginTop: "8px",
-      marginBottom: "32px",
-    }}
-  >
-    {formattedDate}
-  </p>
-)}
-
-    <article dangerouslySetInnerHTML={{ __html: contentHtml }} />
-  </main>
-)}
+  return <Article entry={entry} kind="reports" />;
+}

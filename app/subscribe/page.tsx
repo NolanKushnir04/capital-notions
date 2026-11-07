@@ -1,133 +1,94 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useEffect, useRef } from "react";
 import { subscribe, type SubscribeState } from "@/app/actions/subscribe";
 
 const initialState: SubscribeState = { status: "idle" };
 
+const PERKS = [
+  "New equity research reports the day they publish",
+  "Occasional market commentary and updates",
+  "No spam, no promotions. Unsubscribe anytime",
+];
+
 export default function SubscribePage() {
-  const [state, formAction] = useActionState(subscribe, initialState);
+  const [state, formAction, isPending] = useActionState(subscribe, initialState);
+  const formRef = useRef<HTMLFormElement>(null);
+
+  // Clear the form after a successful signup.
+  useEffect(() => {
+    if (state.status === "success") formRef.current?.reset();
+  }, [state]);
 
   return (
-    <main
-      style={{
-        maxWidth: 620,
-        margin: "120px auto",
-        padding: "0 16px",
-        fontFamily: "Roboto, system-ui, sans-serif",
-      }}
-    >
-      {/* Header */}
-      <header style={{ marginBottom: 32 }}>
-        <h1
-          style={{
-            fontSize: 24,
-            fontWeight: 600,
-            marginBottom: 16,
-            letterSpacing: "-0.02em"
-          }}
-        >
-          Connect with Capital Notions
-        </h1>
+    <main className="page">
+      <div className="subscribe">
+        <div className="subscribe__intro">
+          <p className="eyebrow">Newsletter</p>
+          <h1 className="page-title">Connect with Capital Notions</h1>
+          <p className="page-intro">
+            Sign up to receive every update and be notified whenever Capital
+            Notions releases a new report. We respect your time and privacy.
+          </p>
 
-        <p
-          style={{
-            fontSize: 16,
-            lineHeight: 1.6,
-            color: "#555"
-          }}
-        >
-          We encourage you to sign up to Capital Notion's newsletter 
-          with the form below to recieve all updates and be notified 
-          whenever Capital Notions releases a new report. We respect 
-          your time and privacy. No spam, no promotions. Unsubscribe anytime.
-        </p>
-      </header>
+          <ul className="perks">
+            {PERKS.map((perk) => (
+              <li key={perk}>{perk}</li>
+            ))}
+          </ul>
 
-      {/* Form */}
-      <form action={formAction}>
-        <div style={{ display: "flex", gap: 12 }}>
-          <input
-            name="first_name"
-            placeholder="First name"
-            style={inputStyle}
-          />
-          <input
-            name="last_name"
-            placeholder="Last name"
-            style={inputStyle}
-          />
+          <p className="subscribe__contact">
+            Want to reach the team directly? Email{" "}
+            <a href="mailto:nolansnotions@gmail.com">nolansnotions@gmail.com</a>.
+          </p>
         </div>
 
-        <input
-          name="phone"
-          placeholder="Phone number (optional)"
-          style={{ ...inputStyle, marginTop: 12 }}
-        />
+        <form ref={formRef} action={formAction} className="form-card">
+          <div className="field-row">
+            <div className="field">
+              <label htmlFor="first_name">First name</label>
+              <input id="first_name" name="first_name" autoComplete="given-name" />
+            </div>
+            <div className="field">
+              <label htmlFor="last_name">Last name</label>
+              <input id="last_name" name="last_name" autoComplete="family-name" />
+            </div>
+          </div>
 
-        <input
-          type="email"
-          name="email"
-          required
-          placeholder="Email address"
-          style={{ ...inputStyle, marginTop: 12 }}
-        />
+          <div className="field">
+            <label htmlFor="email">
+              Email address <span className="field__req" aria-hidden="true">*</span>
+            </label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              required
+              autoComplete="email"
+              placeholder="you@example.com"
+            />
+          </div>
 
-        <button type="submit" style={buttonStyle}>
-          Subscribe
-        </button>
-      </form>
+          <div className="field">
+            <label htmlFor="phone">
+              Phone number <span className="field__opt">(optional)</span>
+            </label>
+            <input id="phone" type="tel" name="phone" autoComplete="tel" />
+          </div>
 
-      <p
-  style={{
-    marginTop: 20,
-    fontSize: 14,
-    lineHeight: 1.6,
-    color: "#667085"
-  }}
->
-  If you would like to reach out to the Capital Notion's team for 
-  any reason at all, please send an email to the address at the bottom 
-  of the page, or a text to the phone number.
-</p>
+          <button type="submit" className="button form-card__submit" disabled={isPending}>
+            {isPending ? "Subscribing…" : "Subscribe"}
+          </button>
 
-      {/* Feedback */}
-      {state.status === "success" && (
-        <p style={{ marginTop: 16, color: "#1a7f37", fontSize: 14 }}>
-          {state.message}
-        </p>
-      )}
-
-      {state.status === "error" && (
-        <p style={{ marginTop: 16, color: "#b42318", fontSize: 14 }}>
-          {state.message}
-        </p>
-      )}
+          <p
+            className={`form-message form-message--${state.status}`}
+            role="status"
+            aria-live="polite"
+          >
+            {state.status !== "idle" ? state.message : ""}
+          </p>
+        </form>
+      </div>
     </main>
   );
 }
-
-/* ---------- styles ---------- */
-
-const inputStyle: React.CSSProperties = {
-  width: "100%",
-  padding: "10px 12px",
-  marginTop: -8,
-  fontSize: 14,
-  borderRadius: 6,
-  border: "1px solid #d0d5dd",
-  outline: "none"
-};
-
-const buttonStyle: React.CSSProperties = {
-  width: "100%",
-  marginTop: 20,
-  padding: "11px 12px",
-  fontSize: 14,
-  fontWeight: 500,
-  borderRadius: 6,
-  border: "none",
-  backgroundColor: "#111",
-  color: "#fff",
-  cursor: "pointer"
-};

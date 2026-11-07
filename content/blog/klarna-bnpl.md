@@ -4,7 +4,7 @@ description: In this post, Nicolas Liang touches on Klarna and the BNPL sector a
 date: 2026-02-25
 ---
 
-![Alt text](/images/klarna-photo.jpeg)
+![Klarna logo above a buy now, pay later explainer: add items, choose Klarna at checkout, pay in 30 days or 3 interest-free payments](/images/klarna-photo.jpeg)
 
 *As of February 20: Shares down 71.25% since IPO. Revenue up 24–30% year-on-year as reported in its most recent earnings*
 

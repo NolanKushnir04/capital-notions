@@ -1,57 +1,32 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import Link from "next/link";
+import type { Metadata } from "next";
+import EntryList from "@/app/components/EntryList";
+import { getAllEntries } from "@/app/lib/content";
 
-const REPORTS_PATH = path.join(process.cwd(), "content/reports");
+export const metadata: Metadata = {
+  title: "Research Reports",
+  description:
+    "Formal equity research from Capital Notions: initiation reports, valuation work and investment theses.",
+};
 
 export default function ReportsIndex() {
-  const files = fs.readdirSync(REPORTS_PATH);
-
-  const reports = files
-    .map((file) => {
-      const slug = file.replace(".md", "");
-      const content = fs.readFileSync(path.join(REPORTS_PATH, file), "utf8");
-      const { data } = matter(content);
-
-      return {
-        slug,
-        title: data.title ?? slug,
-        date: data.date ? new Date(data.date) : new Date(0),
-      };
-    })
-    .sort((a, b) => b.date.getTime() - a.date.getTime());
+  const reports = getAllEntries("reports");
 
   return (
-    <main style={{ maxWidth: 720, margin: "44px auto" }}>
-      <h1>Research Reports</h1>
+    <main className="page">
+      <header className="page-header">
+        <p className="eyebrow">Equity Research</p>
+        <h1 className="page-title">Research Reports</h1>
+        <p className="page-intro">
+          Formal equity research from the Capital Notions team: initiation
+          reports, valuation work and full investment theses.
+        </p>
+      </header>
 
-      <ul
-        style={{
-          marginTop: "28px",
-          paddingLeft: "20px",
-        }}
-      >
-        {reports.map((report) => (
-          <li
-            key={report.slug}
-            style={{
-              marginBottom: "18px",
-              lineHeight: 1.6,
-            }}
-          >
-            <Link
-              href={`/reports/${report.slug}`}
-              style={{
-                fontSize: "1.05rem",
-                textDecoration: "none",
-              }}
-            >
-              {report.title}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      {reports.length > 0 ? (
+        <EntryList entries={reports} kind="reports" />
+      ) : (
+        <p className="empty-state">New research is on the way.</p>
+      )}
     </main>
   );
 }

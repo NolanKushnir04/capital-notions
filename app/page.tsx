@@ -1,165 +1,135 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
+import Image from "next/image";
 import Link from "next/link";
+import EntryList from "@/app/components/EntryList";
+import ReportSummary from "@/app/components/ReportSummary";
+import SubscribeInline from "@/app/components/SubscribeInline";
+import { formatDate, getAllEntries } from "@/app/lib/content";
 
-const REPORTS_PATH = path.join(process.cwd(), "content/reports");
-
-function getLatestReport() {
-  const files = fs.readdirSync(REPORTS_PATH);
-
-  const reports = files.map((file) => {
-    const fullPath = path.join(REPORTS_PATH, file);
-    const stats = fs.statSync(fullPath);
-    const content = fs.readFileSync(fullPath, "utf8");
-    const { data } = matter(content);
-
-    return {
-      slug: file.replace(".md", ""),
-      title: data.title ?? file.replace(".md", ""),
-      description: data.description ?? "",
-      modified: stats.mtime,
-    };
-  });
-
-  reports.sort((a, b) => b.modified.getTime() - a.modified.getTime());
-
-  return reports[0];
-}
+const PRINCIPLES = [
+  {
+    title: "Deep equity research",
+    text: "Full initiation reports built from filings, earnings calls and our own models, not headlines.",
+  },
+  {
+    title: "Disciplined valuation",
+    text: "Every rating is backed by an explicit model and price target, with the assumptions shown.",
+  },
+  {
+    title: "Honest about risk",
+    text: "We lay out downside scenarios and disclose our positions, so you can weigh the call yourself.",
+  },
+];
 
 export default function Home() {
-  const latestReport = getLatestReport();
+  const reports = getAllEntries("reports");
+  const [latest, ...more] = reports;
+
   return (
-    <main
-      style={{
-        maxWidth: "900px",
-        margin: "-50px auto",
-        padding: "0 24px",
-        textAlign: "center",
-      }}
-    >
-      {/* Header */}
-      <header style={{ marginBottom: "100px" }}>
-        <div
-          className="home-header-grid"
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr auto 1fr",
-            alignItems: "center",
-            marginBottom: "0px",
-          }}
-        >
-          {/* Left: Logo */}
-          <div style={{ justifySelf: "start", marginLeft: "70px" }}>
-            <img
-              src="/logo.png"
-              alt="Capital Notions logo"
-              style={{ width: "216px" }}
-            />
+    <main className="page home">
+      {/* Hero */}
+      <section className="home-hero">
+        <Image
+          src="/cn-mark.png"
+          alt="Capital Notions logo"
+          width={88}
+          height={88}
+          priority
+          className="home-hero__logo"
+        />
+        <p className="eyebrow">Independent Equity Research</p>
+        <h1 className="home-hero__title">Capital Notions</h1>
+        <p className="home-hero__lead">
+          Value-driven investment analysis and market commentary. Our work
+          emphasizes deep equity research, disciplined valuation and thoughtful
+          discussion of risk and opportunity.
+        </p>
+        <div className="home-hero__actions">
+          {latest && (
+            <Link href={`/reports/${latest.slug}`} className="button">
+              Read the latest report
+            </Link>
+          )}
+          <Link href="/reports" className="button button--ghost">
+            Browse research
+          </Link>
+        </div>
+      </section>
+
+      {/* Latest report */}
+      {latest && (
+        <section className="home-section" aria-labelledby="latest-heading">
+          <div className="section-head">
+            <h2 id="latest-heading" className="section-head__title">
+              Latest Report
+            </h2>
+            <Link href="/reports" className="section-head__link">
+              All reports →
+            </Link>
           </div>
 
-          {/* Center: Title */}
-          <h1
-            style={{
-              fontFamily: "Roboto, system-ui, sans-serif",
-              fontSize: "3.1rem",
-              fontWeight: 500,
-              letterSpacing: "-0.02em",
-              margin: 0,
-            }}
-          >
-            Capital Notions
-          </h1>
+          <Link href={`/reports/${latest.slug}`} className="feature">
+            <div className="feature__body">
+              <p className="feature__meta">
+                {formatDate(latest.date)} · {latest.readingTime} min read
+              </p>
+              <h3 className="feature__title">{latest.title}</h3>
+              {latest.description && (
+                <p className="feature__desc">{latest.description}</p>
+              )}
+              <span className="feature__cta">
+                Read the report <span aria-hidden="true">→</span>
+              </span>
+            </div>
+            <div className="feature__facts">
+              <ReportSummary entry={latest} compact />
+            </div>
+          </Link>
+        </section>
+      )}
 
-          {/* Right spacer */}
-          <div />
+      {/* Older reports (appears once there's more than one) */}
+      {more.length > 0 && (
+        <section className="home-section" aria-labelledby="more-heading">
+          <div className="section-head">
+            <h2 id="more-heading" className="section-head__title">
+              More Research
+            </h2>
+          </div>
+          <EntryList entries={more.slice(0, 4)} kind="reports" />
+        </section>
+      )}
+
+      {/* Approach */}
+      <section className="home-section" aria-labelledby="approach-heading">
+        <div className="section-head">
+          <h2 id="approach-heading" className="section-head__title">
+            Our Approach
+          </h2>
+          <Link href="/about" className="section-head__link">
+            About us →
+          </Link>
         </div>
+        <div className="principles">
+          {PRINCIPLES.map((p) => (
+            <div key={p.title} className="principle">
+              <h3 className="principle__title">{p.title}</h3>
+              <p className="principle__text">{p.text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
-        {/* Subtitle */}
-        <p
-          style={{
-            fontFamily: "Roboto, system-ui, sans-serif",
-            fontSize: "1.15rem",
-            lineHeight: 1.7,
-            maxWidth: "725px",
-            marginTop: "-18px",
-            marginLeft: "auto",
-            marginRight: "auto",
-            marginBottom: "0",
-            textAlign: "center",
-          }}
-        >
-          Capital Notions is an independent research platform focused on
-          value-driven investment analysis and market commentary. Our work
-          emphasizes deep equity research, disciplined valuation, and thoughtful
-          discussion of news, risk, and opportunity.
-        </p>
-      </header>
-
-      {/* Latest post preview */}
-      <section>
-        <h2
-          style={{
-            fontFamily: "Roboto, system-ui, sans-serif",
-            fontSize: "2.1rem",
-            marginBottom: "24px",
-            marginTop: "80px",
-            fontWeight: 500,
-          }}
-        >
-          ↓ Latest Research Report ↓
-        </h2>
-
-        <a
-          href={`/reports/${latestReport.slug}`}
-          style={{
-            fontFamily: "Roboto, system-ui, sans-serif",
-            display: "block",
-            maxWidth: "640px",
-            margin: "32px auto",
-            padding: "32px",
-            border: "1px solid #000000",
-            borderRadius: "14px",
-            textDecoration: "none",
-            color: "inherit",
-          }}
-        >
-          <h3
-            style={{
-              fontFamily: "Roboto, system-ui, sans-serif",
-              fontSize: "1.5rem",
-              marginTop: "-12px",
-              marginBottom: "18px",
-              letterSpacing: "-0.01em",
-            }}
-          >
-            {latestReport.title}
-          </h3>
-
-          <p
-            style={{
-              fontFamily: "Roboto, system-ui, sans-serif",
-              fontSize: "1rem",
-              lineHeight: 1.6,
-              marginBottom: "18px",
-            }}
-          >
-            {latestReport.description}
+      {/* Subscribe */}
+      <section className="home-subscribe" aria-labelledby="subscribe-heading">
+        <div>
+          <h2 id="subscribe-heading" className="home-subscribe__title">
+            Get new research by email
+          </h2>
+          <p className="home-subscribe__text">
+            Be the first to read each new report. No spam, unsubscribe anytime.
           </p>
-
-          <span
-            style={{
-              fontFamily: "Roboto, system-ui, sans-serif",
-              fontSize: "0.95rem",
-              fontWeight: 500,
-              marginTop: "8px",
-              marginBottom: "-12px",
-              display: "block",
-            }}
-          >
-            Read report →
-          </span>
-        </a>
+        </div>
+        <SubscribeInline />
       </section>
     </main>
   );

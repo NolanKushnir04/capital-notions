@@ -2,14 +2,23 @@
 title: COMPASS PATHWAYS PLC - Equity Research Report
 description: Full Equity Research Initiation Report on Compass Pathways Plc
 date: 2025-12-10
+ticker: CMPS
+exchange: NASDAQ
+rating: Buy
+priceTarget: 22
+priceAtPublication: 6.50
+bullCase: 40
+bearCase: 4
+sector: Healthcare
+industry: Biotechnology
 ---
 
-![Alt text](/images/cmps-er.jpeg)
+![Report cover: Compass Pathways (NASDAQ: CMPS), Buy rating, $22 price target vs. $6.50 current price, with $40 upside and $4 downside scenarios](/images/cmps-er.jpeg)
 *Nolan's Investment Notion released our first coverage on CMPS back in the beginning of February 2025 with a bullish, informal company analysis titled "Compass Pathways (CMPS) - Company Analysis", when CMPS was trading around ~$4.5 USD. CMPS is now trading at ~$6.5 USD as of today, marking a ~44% increase since our first public coverage. This equity research initiation report marks the official formal coverage of Compass Pathways Plc by Capital Notions.*
 
 **Executive Summary:**
 
-Capital Notions initiates coverage on Compass Pathways PLC (CMPS) with a buy rating and $22 price target (presenting a 238% upside), driven by the company's main asset COMP360 being brought to market sooner than expected, while paired with controlled operating expense spending. COMP360 recently delivered positive and pivotal phase 3 clinical trial results; and now appears positioned to be the first FDA approved psilocybin assisted therapy for treatment resistant depression (TRD). My thesis is based on (1) clinical de-risking after COMP005 results, (2) a clear regulatory path enabling potential FDA approval for late 2026 - early 2027, and (3) a high-value commercial opportunity supported by strong efficacy, durable response, and significant unmet clinical needs in TRD. COMP360’s display of significant statistical improvement in MADRS (Montgomery–Åsberg Depression Rating Scale) in week 6 of their pivotal COMP005 trial, coupled with an acceptable safety profile and a therapist-based delivery model, advantageously positions it against competitive options such as SSRIs, TMS, and Spravato. These alternatives all suffer from either limited durability or high discontinuation rates. It is my belief that investors are undervaluing CMPS in the current market by not appreciating their ability to rapidly scale the therapy ecosystem with structural advantages. Our accessibility-driven models suggest a faster initial uptake than consensus, capturing a meaningful amount of the diagnosed ~2.8M TRD patients in the U.S. With ~$200M in cash, advancement of COMP006 to full top-line data in Q1 2026, and an anticipated NDA filing in late 2026, we see CMPS at a clinical and regulatory inflection point. My risk adjusted net present value (rNPV)-driven valuation (exhibit #8) supports the view that CMPS is significantly undervalued relative to the significance of its upcoming catalysts, creating an asymmetric risk/reward profile as COMP360 approaches commercialization.
+Capital Notions initiates coverage on Compass Pathways PLC (CMPS) with a buy rating and $22 price target (presenting a 238% upside), driven by the company's main asset COMP360 being brought to market sooner than expected, while paired with controlled operating expense spending. COMP360 recently delivered positive and pivotal phase 3 clinical trial results; and now appears positioned to be the first FDA approved psilocybin assisted therapy for treatment resistant depression (TRD). Our thesis is based on (1) clinical de-risking after COMP005 results, (2) a clear regulatory path enabling potential FDA approval for late 2026 - early 2027, and (3) a high-value commercial opportunity supported by strong efficacy, durable response, and significant unmet clinical needs in TRD. COMP360’s display of significant statistical improvement in MADRS (Montgomery–Åsberg Depression Rating Scale) in week 6 of their pivotal COMP005 trial, coupled with an acceptable safety profile and a therapist-based delivery model, advantageously positions it against competitive options such as SSRIs, TMS, and Spravato. These alternatives all suffer from either limited durability or high discontinuation rates. It is our belief that investors are undervaluing CMPS in the current market by not appreciating their ability to rapidly scale the therapy ecosystem with structural advantages. Our accessibility-driven models suggest a faster initial uptake than consensus, capturing a meaningful amount of the diagnosed ~2.8M TRD patients in the U.S. With ~$200M in cash, advancement of COMP006 to full top-line data in Q1 2026, and an anticipated NDA filing in late 2026, we see CMPS at a clinical and regulatory inflection point. Our risk adjusted net present value (rNPV)-driven valuation (exhibit #8) supports the view that CMPS is significantly undervalued relative to the significance of its upcoming catalysts, creating an asymmetric risk/reward profile as COMP360 approaches commercialization.
 
 **Our View:**
 
@@ -20,7 +29,7 @@ We believe CMPS offers a very clear, late-stage, de-risked path in CNS (Central 
 Compass Pathways (CMPS) is a clinical-stage mental health biotechnology company headquartered in London, UK, with operations in the U.S. and Europe. Founded in 2016, the company is focused on developing psilocybin-assisted therapies for treatment-resistant depression (TRD) and other difficult to treat mental health conditions such as PTSD. Its lead asset is COMP360 which is a proprietary synthetic psilocybin formulation currently in Phase 3 development. Compass’s mission is to innovate the space of mental health treatment by developing evidence supported and regulatory approved psychedelic therapies. The company is driven by the rationale that TRD represents a large, growing, and underserved population where existing treatments offer limited effectiveness, poor durability, and high discontinuation rates. By pairing COMP360 with a structured, therapist-guided model, Compass aims to create a scalable, consistent therapeutic landscape capable of delivering deep-rooted and durable clinical improvement for patients who find traditional antidepressants or therapies ineffective.
 
 COMP360 is Compass’ flagship product which integrating three components: (1) a pharmaceutical-grade synthetic psilocybin drug, (2) a standardized method of delivery consisting of preparation, supervised dosing, and integration sessions with a therapist, which is where we believe COMP360 really breaks the mold, and (3) an operational delivery infrastructure that includes therapist training, site activation, and digital tools for session consistency. This combined drug and therapy framework is designed to produce consistent outcomes, enhance safety, and support regulatory and commercial scalability for TRD and beyond. The ability to bring patients to a deeply connected and impressionable state with psilocybin, then paired with guidance from trained therapists, is what we believe to be driving COMP360’s success thus far, and what will carry it further to come. The company’s synthetic psilocybin is manufactured using a high-purity crystallization process that ensures consistency within all batches and avoids the variability associated with plant derived psilocybin. Compass holds a broad IP portfolio that includes formulation patents for COMP360, method of use patents covering therapist guided administration, and trade secrets related to session structure and manufacturing processes. COMP360 is also designated by the FDA as a Breakthrough Therapy, providing expedited development and review priority for promising psychiatric treatments. Compass’s progress is driven by an experienced management team led by CEO Kabir Nath and Chief Medical Officer Dr. Guy Goodwin, both of whom bring extensive backgrounds in CNS therapeutics and clinical psychiatry. The company remains pre-commercial and reported approximately $200M in cash as of the latest quarter (Q3 2025), providing runway into 2026 to complete its Phase 3 program and advance toward an NDA submission.
-![Alt text](/images/cmps-exhibit-1.jpeg)
+![Exhibit 1: COMP360 pipeline (TRD in Phase III; PTSD and anorexia nervosa in Phase II) and milestones through 2027](/images/cmps-exhibit-1.jpeg)
 
 [*Source: Capital Notions, Exhibit #1*](/images/cmps-exhibit-1.jpeg)
 
@@ -33,11 +42,11 @@ There is the pivotal phase 3 program, which they are currently still in, contain
 **Market Opportunity, Industry, and Competitive Landscape:**
 
 Now looking at the market and opportunity for CMPS to capitalize on, there is a global prevalence of ~300M MDD patients (Major Depressive Disorder), and a subset of roughly 15-30% of those being TRD (~2.8M in U.S.). TRD is a high value segment as patient's needs are highly unmet, there are high relapse rates with few remedies providing real duration, and resulting in a high economic burden. There are limitations for all existing therapies that are leading to these unmet needs, such as, SSRIs/SNRIs having a slow onset and low remission rates, Spravato having limited durability and an FDA black box warning (strictest FDA safety alert), and ECT/TMS while having potential, also comes with limited access and variable durability among patients. This is where COMP360 fits right into place, a fast acting and durable solution. The size of commercial opportunity does not look large at first, but the numbers do work well while still being relatively conservative, as indicated in exhibits #2 and #3.
-![Alt text](/images/cmps-exhibit-2.jpeg)
+![Exhibit 2: U.S. TRD patient accessibility and penetration model, reaching 210,000 accessible patients at the 2033 peak](/images/cmps-exhibit-2.jpeg)
 
 [*Source: Capital Notions, Exhibit #2*](/images/cmps-exhibit-2.jpeg)
 
-![Alt text](/images/cmps-exhibit-3.jpeg)
+![Exhibit 3: Projected accessibility and penetration curves, 2027 to 2035, with penetration plateauing at 60%](/images/cmps-exhibit-3.jpeg)
 
 [*Source: Capital Notions, Exhibit #3*](/images/cmps-exhibit-3.jpeg)
 
@@ -52,30 +61,30 @@ While COMP360 is exciting and innovative, it is not the only company in the land
 **Financial Models and Forecasts:**
 
 In the following exhibits we present our full financial forecasts for Compass Pathways Plc, including a revenue build, cost structure projections, a 10-year pro forma income statement, and a rNPV model of COMP360. Our models take into account and reflect assumptions around the products pricing, market penetration, opex discipline, and probability-adjusted regulatory timelines.
-![Alt text](/images/cmps-exhibit-2.jpeg)
+![Exhibit 2: U.S. TRD patient accessibility and penetration model, reaching 210,000 accessible patients at the 2033 peak](/images/cmps-exhibit-2.jpeg)
 
 [*Source: Capital Notions, Exhibit #2*](/images/cmps-exhibit-2.jpeg)
 
-![Alt text](/images/cmps-exhibit-4.jpeg)
+![Exhibit 4: COMP360 revenue forecast at $4,500 per patient, growing from $12.6M in year 2 to $1.48B in year 10](/images/cmps-exhibit-4.jpeg)
 
 [*Source: Capital Notions, Exhibit #4*](/images/cmps-exhibit-4.jpeg)
 
 Revenue projections are as seen above, starting in 2027 (year 2 of rNPV model) at $12.6M and ramping up to a revenue of $1.477B by 2035 (year 10). The as seen before charts containing market size  stats are also above (exhibit #2), where we can see projected accessibility of eligible patients growing from 28,000 in 2027 to 350,000 in 2033, depending on the number of clinics offering COMP360 expanding, number of trained therapists, and patient willingness. The penetration model gives us the final number of projected clients, going from 2,800 clients in 2027 to 210,000 clients by 2033, dependent on brand recognition, deployment strategy, and competition. We estimate a single course of COMP360 costing roughly ~$10,000, 45% of which being CMPS revenue ($4,500), and conservatively projecting 1 dose per year, per patient.
-![Alt text](/images/cmps-exhibit-5.jpeg)
+![Exhibit 5: COMP360 cost assumptions for COGS, R&D and SG&A as a percent of revenue, years 1 to 10](/images/cmps-exhibit-5.jpeg)
 
 [*Source: Capital Notions, Exhibit #5*](/images/cmps-exhibit-5.jpeg)
 
-![Alt text](/images/cmps-exhibit-6.jpeg)
+![Exhibit 6: Projected R&D and SG&A spending as a percent of revenue, with SG&A peaking near 80% in year 3](/images/cmps-exhibit-6.jpeg)
 
 [*Source: Capital Notions, Exhibit #6*](/images/cmps-exhibit-6.jpeg)
 
 The above exhibit (#5 and #6) is our cost structure projections, displaying COGS (cost of goods sold), R&D (research and development), and SG&A (selling, general, and administration). We can see COGS starting in the year 2027 as per projected commercialization start, and reflecting a very high profit margin for the synthesized psilocybin, as it is a very cheap substance to manufacture, leaving our projections sitting at roughly 4.5% of revenue. R&D costs are higher in precommercial years, sitting at 12% (relative to the previous year projection) in 2027 due to tapering off phase III costs, as well as funding additional indications such as PTSD. Once pipeline programs mature, we can see R&D shift to maintenance levels from 4% in 2030 to 2% in 2035. We see high SG&A spikes in early commercialization years, sitting at 75% in 2027 and 80% in 2028 (both relative percentages) due to building clinic networks, certifying treatment centers, training therapists, reimbursing onboarding costs, and medical affairs as well as reimbursement infrastructure, similar to the rollout of Spravato. SG&A normalizes rapidly as once clinic infrastructure is fixed, we can see a maintained 5% growth by 2033 due to good operating leverage, similar to mature neurology/psychiatry products and single-product biotech companies.
-![Alt text](/images/cmps-exhibit-7-small.jpeg)
+![Exhibit 7: CMPS projected income statement, 2023A to 2035E](/images/cmps-exhibit-7-small.jpeg)
 
 [*Source: Capital Notions, Exhibit #7* (click for image)](/images/cmps-exhibit-7.jpeg)
 
 The above exhibit (#7) is our projected 10 year income statement with relevant line items. Revenue projections for PTSD were based relative to TRD projections, using management releases regarding the finalization of late stage PTSD trials, and PTSD being a massively underserved market, while still keeping numbers conservative. Although we see revenue commencing in 2027 with projected commercialization, we don’t see CMPS’ operating income going positive until 2031 due to the high opex that comes with initial commercialization. We can see net income turning positive in the same year, 2031, as with gross profit and eps. We see positive growth in profit margin as we sit around ~20% in the first positive year (2031), but that margin climbs up to ~70% by year 2035. As you will soon see in the equity valuation, CMPS currently sits on roughly ~$200M of cash, which should float CMPS comfortably through data readouts in 2026 and into 2027.
-![Alt text](/images/cmps-exhibit-8.jpeg)
+![Exhibit 8: CMPS rNPV model using a 13% discount rate, deriving a $2.14B equity value and a $22 price target](/images/cmps-exhibit-8.jpeg)
 
 [*Source: Capital Notions, Exhibit #8*](/images/cmps-exhibit-8.jpeg)
 
@@ -120,21 +129,37 @@ At Nolan’s Investment Notion, we like the steps and process Compass Pathways h
 
 *All Exhibits are sourced and under ownership of Capital Notions*
 
-1. ![Alt text](/images/cmps-exhibit-1.jpeg)
+[![Exhibit 1: COMP360 pipeline (TRD in Phase III; PTSD and anorexia nervosa in Phase II) and milestones through 2027](/images/cmps-exhibit-1.jpeg)](/images/cmps-exhibit-1.jpeg)
 
-2. ![Alt text](/images/cmps-exhibit-2.jpeg)
+[*Exhibit #1: COMP360 pipeline and milestones · Open full size ↗*](/images/cmps-exhibit-1.jpeg)
 
-3. ![Alt text](/images/cmps-exhibit-3.jpeg)
+[![Exhibit 2: U.S. TRD patient accessibility and penetration model, reaching 210,000 accessible patients at the 2033 peak](/images/cmps-exhibit-2.jpeg)](/images/cmps-exhibit-2.jpeg)
 
-4. ![Alt text](/images/cmps-exhibit-4.jpeg)
+[*Exhibit #2: U.S. TRD accessibility and penetration model · Open full size ↗*](/images/cmps-exhibit-2.jpeg)
 
-5. ![Alt text](/images/cmps-exhibit-5.jpeg)
+[![Exhibit 3: Projected accessibility and penetration curves, 2027 to 2035, with penetration plateauing at 60%](/images/cmps-exhibit-3.jpeg)](/images/cmps-exhibit-3.jpeg)
 
-6. ![Alt text](/images/cmps-exhibit-6.jpeg)
+[*Exhibit #3: Projected accessibility and penetration curve · Open full size ↗*](/images/cmps-exhibit-3.jpeg)
 
-7. ![Alt text](/images/cmps-exhibit-7.jpeg)
+[![Exhibit 4: COMP360 revenue forecast at $4,500 per patient, growing from $12.6M in year 2 to $1.48B in year 10](/images/cmps-exhibit-4.jpeg)](/images/cmps-exhibit-4.jpeg)
 
-8. ![Alt text](/images/cmps-exhibit-8.jpeg)
+[*Exhibit #4: COMP360 revenue forecast · Open full size ↗*](/images/cmps-exhibit-4.jpeg)
+
+[![Exhibit 5: COMP360 cost assumptions for COGS, R&D and SG&A as a percent of revenue, years 1 to 10](/images/cmps-exhibit-5.jpeg)](/images/cmps-exhibit-5.jpeg)
+
+[*Exhibit #5: COMP360 cost assumptions · Open full size ↗*](/images/cmps-exhibit-5.jpeg)
+
+[![Exhibit 6: Projected R&D and SG&A spending as a percent of revenue, with SG&A peaking near 80% in year 3](/images/cmps-exhibit-6.jpeg)](/images/cmps-exhibit-6.jpeg)
+
+[*Exhibit #6: Projected R&D and SG&A spending curve · Open full size ↗*](/images/cmps-exhibit-6.jpeg)
+
+[![Exhibit 7: CMPS projected income statement, 2023A to 2035E](/images/cmps-exhibit-7.jpeg)](/images/cmps-exhibit-7.jpeg)
+
+[*Exhibit #7: Projected income statement, 2023A–2035E · Open full size ↗*](/images/cmps-exhibit-7.jpeg)
+
+[![Exhibit 8: CMPS rNPV model using a 13% discount rate, deriving a $2.14B equity value and a $22 price target](/images/cmps-exhibit-8.jpeg)](/images/cmps-exhibit-8.jpeg)
+
+[*Exhibit #8: rNPV valuation model · Open full size ↗*](/images/cmps-exhibit-8.jpeg)
 
 **Sources:**
 

@@ -1,57 +1,43 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import Link from "next/link";
+import type { Metadata } from "next";
+import EntryList from "@/app/components/EntryList";
+import { getAllEntries, type EntryMeta } from "@/app/lib/content";
 
-const BLOG_PATH = path.join(process.cwd(), "content/blog");
+export const metadata: Metadata = {
+  title: "Blog",
+  description:
+    "Shorter-form commentary from Capital Notions on markets, companies and personal finance.",
+};
 
 export default function BlogIndex() {
-  const files = fs.readdirSync(BLOG_PATH);
+  const posts = getAllEntries("blog");
 
-  const posts = files
-    .map((file) => {
-      const slug = file.replace(".md", "");
-      const content = fs.readFileSync(path.join(BLOG_PATH, file), "utf8");
-      const { data } = matter(content);
-
-      return {
-        slug,
-        title: data.title ?? slug,
-        date: data.date ? new Date(data.date) : new Date(0),
-      };
-    })
-    .sort((a, b) => b.date.getTime() - a.date.getTime());
+  // Group posts by year (already sorted newest first).
+  const byYear = new Map<number, EntryMeta[]>();
+  for (const post of posts) {
+    const year = post.date?.getUTCFullYear() ?? 0;
+    if (!byYear.has(year)) byYear.set(year, []);
+    byYear.get(year)!.push(post);
+  }
 
   return (
-    <main style={{ maxWidth: 720, margin: "44px auto" }}>
-      <h1>Blog</h1>
+    <main className="page">
+      <header className="page-header">
+        <p className="eyebrow">Commentary</p>
+        <h1 className="page-title">Blog</h1>
+        <p className="page-intro">
+          Shorter-form writing on markets, companies we&apos;re watching and
+          personal finance.
+        </p>
+      </header>
 
-      <ul
-        style={{
-          marginTop: "28px",
-          paddingLeft: "20px",
-        }}
-      >
-        {posts.map((post) => (
-          <li
-            key={post.slug}
-            style={{
-              marginBottom: "18px",
-              lineHeight: 1.6,
-            }}
-          >
-            <Link
-              href={`/blog/${post.slug}`}
-              style={{
-                fontSize: "1.05rem",
-                textDecoration: "none",
-              }}
-            >
-              {post.title}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      {[...byYear.entries()].map(([year, yearPosts]) => (
+        <section key={year} className="year-group" aria-labelledby={`year-${year}`}>
+          <h2 id={`year-${year}`} className="year-group__label">
+            {year || "Undated"}
+          </h2>
+          <EntryList entries={yearPosts} kind="blog" />
+        </section>
+      ))}
     </main>
   );
 }
