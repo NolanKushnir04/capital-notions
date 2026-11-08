@@ -8,14 +8,14 @@ Independent equity research site (reports + blog). Next.js 16 App Router, React 
 - `npx tsc --noEmit` and `npx eslint .` must both be clean (currently zero warnings)
 
 ## Working with the owner
-- The owner is new to Claude Code. Explain what you did and why in plain terms.
+- Explain what you did and why in plain terms.
 - For multi-part work, go in **chunks** and **stop after each one** so they can review on localhost.
 - Never commit or push unless asked. Pushing to `main` deploys live.
 - The owner decides on copy (mission text, bios, "Our Approach"). Flag any wording you write.
 - Reports are the main focus. **Do not feature blog posts on the home page.**
 
 ## Design direction
-Modern minimal financial press: Berkshire Hathaway restraint with WSJ/FT polish. Serif headings, sans body, generous white space, hairline rules, one navy accent, subtle hover states. **Avoid** gradients, heavy cards, bright colors, big animations, emoji and icon clutter.
+Modern minimal financial press: Berkshire Hathaway esque with WSJ/FT polish. Serif headings, sans body, generous white space, hairline rules, one navy accent, subtle hover states. **Avoid** gradients, heavy cards, bright colors, big animations, emoji and icon clutter.
 
 ### Tokens (`:root` in `app/globals.css`)
 | Token | Value | Use |
