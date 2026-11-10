@@ -54,15 +54,26 @@ Modern minimal financial press: Berkshire Hathaway esque with WSJ/FT polish. Ser
   - `EntryList`: ruled list of reports/posts
   - `Article`: shared report/blog page with progress bar, summary box, prose, CTA, newer/older links
   - `ReportSummary`: key-facts box; `compact` prop shows the headline row only (home page)
+  - `KeyTakeaways`: bullet box from the `takeaways` frontmatter list (between summary box and body)
   - `SubscribeInline`: one-line email form (home)
   - `ReadingProgress`
 - `app/lib/content.ts`: **all markdown reading goes through here** (`getAllEntries`, `getEntry`, `formatDate`). Don't read `content/` directly in pages.
+- `app/lib/format.ts`: `money()` and `pctFrom()`, shared by the summary box and the track record
+- `app/lib/prices.ts`: `getQuote(ticker)` fetches live prices from Finnhub, cached 24h. It returns `null` with no key, on any error, or for an unknown symbol, so pages show "—". **The free plan covers US listings only**, so TSX tickers won't get prices.
+- `app/lib/site.ts`: `SITE_URL` (default `https://capitalnotions.ca`, overridable with `NEXT_PUBLIC_SITE_URL`), `absoluteUrl()`, and `alternatesFor(path)`. **Every page's metadata sets `alternates: alternatesFor("/path")`**, because Next replaces `alternates` per page and this keeps both the canonical URL and the RSS link.
 - `app/actions/subscribe.ts`: Supabase insert into `Subscribers`
-- Pages: `/`, `/reports`, `/reports/[slug]`, `/blog`, `/blog/[slug]`, `/about` (team is a data array at the top), `/subscribe`, `not-found.tsx`
+- Pages: `/`, `/reports`, `/reports/[slug]`, `/track-record` (revalidates daily), `/blog`, `/blog/[slug]`, `/about` (team is a data array at the top), `/subscribe` (metadata lives in `subscribe/layout.tsx` because the page is a client component), `not-found.tsx`
+- SEO: `app/sitemap.ts`, `app/robots.ts`, `app/feed.xml/route.ts` (RSS), and JSON-LD in `Article.tsx`. Add any new top-level page to the sitemap's static list. The domain is verified in Google Search Console with a DNS TXT record at Namecheap; don't remove that record.
+
+## Environment variables (`.env.local`, gitignored; mirror them in Vercel)
+- `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`: newsletter signups
+- `FINNHUB_API_KEY`: live prices for `/track-record` (optional; without it, prices show "—")
+- Never print or commit values. After changing env vars in Vercel, redeploy.
 
 ## Content conventions (`content/reports/*.md`, `content/blog/*.md`)
 - Frontmatter: `title`, `description`, `date` (YYYY-MM-DD) are required. The newest by `date` appears first, and the newest report is the one featured on the home page.
-- Optional report fields that fill the summary box (each item hides if missing): `ticker`, `exchange`, `rating` (Buy/Hold/Sell), `priceTarget`, `priceAtPublication` (shown as "Reference price"), `bullCase`, `bearCase`, `sector`, `industry`. Upside percentages are computed.
+- Optional report fields that fill the summary box (each item hides if missing): `ticker`, `exchange`, `rating` (Buy/Hold/Sell), `priceTarget`, `priceAtPublication` (shown as "Reference price"), `bullCase`, `bearCase`, `sector`, `industry`. Upside percentages are computed. A report appears on `/track-record` when it has `ticker` + `priceAtPublication`.
+- Optional `takeaways:` is a YAML list of short bullets. **Quote each item**, since a colon inside an unquoted item breaks the frontmatter.
 - `normalizeMarkdown` in `content.ts` adapts the owner's writing style. Keep it working:
   - a line that is only `**Bold text:**` becomes an `h2`
   - `## **Appendix:**` becomes a clean `h2`

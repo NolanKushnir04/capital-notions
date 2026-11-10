@@ -1,13 +1,5 @@
 import type { EntryMeta } from "@/app/lib/content";
-
-const money = (n: number) =>
-  n.toLocaleString("en-US", { style: "currency", currency: "USD" });
-
-const pctFrom = (target: number, base?: number) => {
-  if (!base) return undefined;
-  const pct = (target / base - 1) * 100;
-  return `${pct >= 0 ? "+" : "−"}${Math.abs(pct).toFixed(0)}%`;
-};
+import { money, pctFrom } from "@/app/lib/format";
 
 type Item = {
   label: string;

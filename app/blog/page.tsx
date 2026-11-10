@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/app/lib/site";
 import EntryList from "@/app/components/EntryList";
 import { getAllEntries, type EntryMeta } from "@/app/lib/content";
 
@@ -6,6 +7,7 @@ export const metadata: Metadata = {
   title: "Blog",
   description:
     "Shorter-form commentary from Capital Notions on markets, companies and personal finance.",
+  alternates: alternatesFor("/blog"),
 };
 
 export default function BlogIndex() {

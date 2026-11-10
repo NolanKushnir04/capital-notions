@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { alternatesFor } from "@/app/lib/site";
 import EntryList from "@/app/components/EntryList";
 import { getAllEntries } from "@/app/lib/content";
 
@@ -6,6 +8,7 @@ export const metadata: Metadata = {
   title: "Research Reports",
   description:
     "Formal equity research from Capital Notions: initiation reports, valuation work and investment theses.",
+  alternates: alternatesFor("/reports"),
 };
 
 export default function ReportsIndex() {
@@ -20,6 +23,9 @@ export default function ReportsIndex() {
           Formal equity research from the Capital Notions team: initiation
           reports, valuation work and full investment theses.
         </p>
+        <Link href="/track-record" className="page-header__link">
+          See our track record →
+        </Link>
       </header>
 
       {reports.length > 0 ? (

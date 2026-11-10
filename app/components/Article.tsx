@@ -1,12 +1,14 @@
 import Link from "next/link";
 import ReadingProgress from "./ReadingProgress";
 import ReportSummary from "./ReportSummary";
+import KeyTakeaways from "./KeyTakeaways";
 import {
   formatDate,
   getAllEntries,
   type ContentKind,
   type Entry,
 } from "@/app/lib/content";
+import { SITE_NAME, absoluteUrl } from "@/app/lib/site";
 
 const LABELS: Record<ContentKind, { eyebrow: string; back: string }> = {
   reports: { eyebrow: "Equity Research", back: "All reports" },
@@ -23,8 +25,34 @@ export default function Article({ entry, kind }: { entry: Entry; kind: ContentKi
   const newer = index > 0 ? all[index - 1] : null;
   const older = index >= 0 && index < all.length - 1 ? all[index + 1] : null;
 
+  // Structured data so search engines understand this is a dated article.
+  const url = absoluteUrl(`/${kind}/${entry.slug}`);
+  const organization = {
+    "@type": "Organization",
+    name: SITE_NAME,
+    url: absoluteUrl("/"),
+    logo: { "@type": "ImageObject", url: absoluteUrl("/cn-mark.png") },
+  };
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": kind === "reports" ? "Report" : "BlogPosting",
+    headline: entry.title,
+    description: entry.description || undefined,
+    datePublished: entry.date?.toISOString(),
+    url,
+    mainEntityOfPage: url,
+    author: organization,
+    publisher: organization,
+    ...(entry.ticker ? { about: { "@type": "Corporation", tickerSymbol: entry.ticker } } : {}),
+  };
+
   return (
     <main className="page">
+      <script
+        type="application/ld+json"
+        // Escape "<" so the JSON can never close the script tag early.
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
+      />
       <ReadingProgress />
 
       <article className="article">
@@ -48,6 +76,8 @@ export default function Article({ entry, kind }: { entry: Entry; kind: ContentKi
         </header>
 
         {kind === "reports" && <ReportSummary entry={entry} />}
+
+        <KeyTakeaways items={entry.takeaways} />
 
         <div className="prose" dangerouslySetInnerHTML={{ __html: entry.html }} />
 

@@ -11,6 +11,10 @@ bullCase: 40
 bearCase: 4
 sector: Healthcare
 industry: Biotechnology
+takeaways:
+  - "Buy rating and $22 price target (238% upside), driven by COMP360 reaching market sooner than expected while operating spend stays controlled."
+  - "Pivotal Phase 3 COMP005 results, with a significant MADRS improvement at week 6, position COMP360 to be the first FDA-approved psilocybin therapy for TRD, with an NDA filing expected in late 2026."
+  - "Our rNPV valuation suggests the market undervalues CMPS's ability to scale its therapy model; with ~$200M in cash, risk/reward into upcoming catalysts is asymmetric."
 ---
 
 ![Report cover: Compass Pathways (NASDAQ: CMPS), Buy rating, $22 price target vs. $6.50 current price, with $40 upside and $4 downside scenarios](/images/cmps-er.jpeg)

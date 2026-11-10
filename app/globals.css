@@ -390,6 +390,20 @@ a {
   color: var(--muted);
 }
 
+.page-header__link {
+  display: inline-block;
+  margin-top: 18px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.page-header__link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .empty-state {
   padding: 32px 0;
   border-top: 1px solid var(--rule);
@@ -677,6 +691,49 @@ a {
 .rating--buy { color: #1a7f37; }
 .rating--hold { color: #9a6700; }
 .rating--sell { color: #b42318; }
+
+/* Key takeaways (optional `takeaways` frontmatter list) */
+.takeaways {
+  margin: 0 0 44px;
+  padding: 4px 0 4px 22px;
+  border-left: 2px solid var(--accent);
+}
+
+.takeaways__title {
+  margin: 0 0 12px;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.takeaways__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.takeaways__list li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+.takeaways__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 8px;
+  height: 1.5px;
+  background: var(--accent);
+}
 
 /* Long-form body text */
 .prose {
@@ -1330,6 +1387,119 @@ a {
 }
 
 /* =========================
+   Track record
+   ========================= */
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.data-table {
+  width: 100%;
+  min-width: 860px;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.data-table th {
+  padding: 0 14px 12px;
+  border-bottom: 1px solid var(--ink);
+  text-align: left;
+  vertical-align: bottom;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.data-table td {
+  padding: 18px 14px;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+  color: var(--ink-soft);
+}
+
+.data-table th:first-child,
+.data-table td:first-child {
+  padding-left: 0;
+}
+
+.data-table th:last-child,
+.data-table td:last-child {
+  padding-right: 0;
+}
+
+.data-table tbody tr {
+  transition: background-color 0.15s ease;
+}
+
+.data-table tbody tr:hover {
+  background: var(--bg-subtle);
+}
+
+.data-table .num {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.data-table__report {
+  display: block;
+  max-width: 300px;
+  font-family: var(--font-serif);
+  font-size: 1.02rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.data-table__report:hover {
+  color: var(--accent);
+}
+
+.data-table__date {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.data-table__ticker {
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.data-table__exchange {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.data-table__strong {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.data-table .rating {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.table-note {
+  max-width: var(--reading-width);
+  margin: 20px 0 0;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* =========================
    Subscribe
    ========================= */
 .subscribe {
@@ -1483,4 +1653,5 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
+
 

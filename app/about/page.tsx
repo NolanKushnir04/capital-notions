@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/app/lib/site";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -6,6 +7,7 @@ export const metadata: Metadata = {
   title: "About",
   description:
     "Capital Notions is an independent research platform covering equities, investing topics and market news.",
+  alternates: alternatesFor("/about"),
 };
 
 type Member = {

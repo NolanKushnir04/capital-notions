@@ -19,9 +19,11 @@ export default function SiteFooter() {
             <p className="site-footer__heading">Explore</p>
             <ul className="site-footer__list">
               <li><Link href="/reports">Research Reports</Link></li>
+              <li><Link href="/track-record">Track Record</Link></li>
               <li><Link href="/blog">Blog</Link></li>
               <li><Link href="/about">About</Link></li>
               <li><Link href="/subscribe">Subscribe</Link></li>
+              <li><a href="/feed.xml">RSS feed</a></li>
             </ul>
           </div>
 

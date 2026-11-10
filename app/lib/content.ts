@@ -26,6 +26,8 @@ export type EntryMeta = {
   bearCase?: number;
   sector?: string;
   industry?: string;
+  // Optional short summary bullets shown above the article body
+  takeaways?: string[];
 };
 
 export type Entry = EntryMeta & { html: string };
@@ -56,6 +58,9 @@ function toMeta(slug: string, data: Record<string, unknown>, body: string): Entr
     bearCase: num(data.bearCase),
     sector: data.sector as string | undefined,
     industry: data.industry as string | undefined,
+    takeaways: Array.isArray(data.takeaways)
+      ? data.takeaways.filter((t): t is string => typeof t === "string" && t.trim() !== "")
+      : undefined,
   };
 }
 

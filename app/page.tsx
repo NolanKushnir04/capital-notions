@@ -1,9 +1,15 @@
+import type { Metadata } from "next";
+import { alternatesFor } from "@/app/lib/site";
 import Image from "next/image";
 import Link from "next/link";
 import EntryList from "@/app/components/EntryList";
 import ReportSummary from "@/app/components/ReportSummary";
 import SubscribeInline from "@/app/components/SubscribeInline";
 import { formatDate, getAllEntries } from "@/app/lib/content";
+
+export const metadata: Metadata = {
+  alternates: alternatesFor("/"),
+};
 
 const PRINCIPLES = [
   {
