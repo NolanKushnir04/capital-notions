@@ -5,8 +5,9 @@ import { money, pctFrom } from "@/app/lib/format";
 import { getQuote } from "@/app/lib/prices";
 import { alternatesFor } from "@/app/lib/site";
 
-// Rebuild this page at most once a day so prices stay fresh.
-export const revalidate = 86400;
+// Rebuild at most hourly. Must stay a literal number (Next reads it at build time)
+// and should match the price cache in lib/prices.ts; see the note there.
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Track Record",
@@ -110,7 +111,7 @@ export default async function TrackRecordPage() {
           <p className="table-note">
             {asOf ? (
               <>
-                Prices as of {formatDate(asOf)}, updated daily · Source: Finnhub.
+                Prices as of {formatDate(asOf)} · Source: Finnhub, refreshed hourly.
                 {pricesMissing && " Some live prices are currently unavailable."}
               </>
             ) : (

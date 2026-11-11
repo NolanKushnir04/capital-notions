@@ -59,10 +59,10 @@ Modern minimal financial press: Berkshire Hathaway esque with WSJ/FT polish. Ser
   - `ReadingProgress`
 - `app/lib/content.ts`: **all markdown reading goes through here** (`getAllEntries`, `getEntry`, `formatDate`). Don't read `content/` directly in pages.
 - `app/lib/format.ts`: `money()` and `pctFrom()`, shared by the summary box and the track record
-- `app/lib/prices.ts`: `getQuote(ticker)` fetches live prices from Finnhub, cached 24h. It returns `null` with no key, on any error, or for an unknown symbol, so pages show "—". **The free plan covers US listings only**, so TSX tickers won't get prices.
+- `app/lib/prices.ts`: `getQuote(ticker)` fetches live prices from Finnhub, cached 1h. **Keep this and the page's `revalidate` both short**: the two caches stack (a rebuild can reuse a stale cached price), which once left prices 2 days old when both were 24h. It returns `null` with no key, on any error, or for an unknown symbol, so pages show "—". **The free plan covers US listings only**, so TSX tickers won't get prices.
 - `app/lib/site.ts`: `SITE_URL` (default `https://capitalnotions.ca`, overridable with `NEXT_PUBLIC_SITE_URL`), `absoluteUrl()`, and `alternatesFor(path)`. **Every page's metadata sets `alternates: alternatesFor("/path")`**, because Next replaces `alternates` per page and this keeps both the canonical URL and the RSS link.
 - `app/actions/subscribe.ts`: Supabase insert into `Subscribers`
-- Pages: `/`, `/reports`, `/reports/[slug]`, `/track-record` (revalidates daily), `/blog`, `/blog/[slug]`, `/about` (team is a data array at the top), `/subscribe` (metadata lives in `subscribe/layout.tsx` because the page is a client component), `not-found.tsx`
+- Pages: `/`, `/reports`, `/reports/[slug]`, `/track-record` (revalidates hourly), `/blog`, `/blog/[slug]`, `/about` (team is a data array at the top), `/subscribe` (metadata lives in `subscribe/layout.tsx` because the page is a client component), `not-found.tsx`
 - SEO: `app/sitemap.ts`, `app/robots.ts`, `app/feed.xml/route.ts` (RSS), and JSON-LD in `Article.tsx`. Add any new top-level page to the sitemap's static list. The domain is verified in Google Search Console with a DNS TXT record at Namecheap; don't remove that record.
 
 ## Environment variables (`.env.local`, gitignored; mirror them in Vercel)

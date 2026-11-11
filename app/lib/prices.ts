@@ -1,5 +1,9 @@
 /**
- * Live stock quotes from Finnhub (https://finnhub.io), cached for a day.
+ * Live stock quotes from Finnhub (https://finnhub.io), cached for an hour.
+ *
+ * Keep this cache and the track record page's `revalidate` both short: they
+ * stack (a page rebuild can reuse a stale cached price), so the worst-case
+ * age is roughly the two added together.
  *
  * Needs FINNHUB_API_KEY in .env.local (and in Vercel's environment variables).
  * Without a key, or if anything goes wrong, getQuote returns null and pages
@@ -7,7 +11,7 @@
  */
 export type Quote = { price: number; asOf: Date };
 
-const ONE_DAY = 60 * 60 * 24;
+const ONE_HOUR = 60 * 60;
 
 export async function getQuote(ticker: string): Promise<Quote | null> {
   const key = process.env.FINNHUB_API_KEY;
@@ -18,7 +22,7 @@ export async function getQuote(ticker: string): Promise<Quote | null> {
       `https://finnhub.io/api/v1/quote?symbol=${encodeURIComponent(ticker)}`,
       {
         headers: { "X-Finnhub-Token": key },
-        next: { revalidate: ONE_DAY },
+        next: { revalidate: ONE_HOUR },
       }
     );
     if (!res.ok) return null;
