@@ -53,7 +53,7 @@ Netflix trades at 15.9x our 2027 EPS of $3.76, against a peer median of 19.5x. T
 
 ### 2. Pricing power and cost discipline still drive earnings growth
 
-Netflix's recent price rises, including in the US, landed in line with past increases, according to management. Third-quarter churn improved year on year, both globally and in the US. We forecast ARM growing 5–8% a year in UCAN on price increases of 4–6% plus advertising. Content amortization grows 2–3 points slower than revenue each year. Operating margin widens from 31.5% in 2026 to 35.9% in 2030. Free cash flow rises from $12.0B to $19.9B. We assume 95% of it funds buybacks, cutting the share count by 22% by 2030. That turns about 8% annual revenue growth into 17% annual EPS growth from 2027 to 2030.
+Netflix's recent price rises, including in the US, landed in line with past increases, according to management. Third-quarter churn improved year on year, both globally and in the US. We forecast ARM growing 5–8% a year in UCAN on price increases of 4–6% plus advertising. Content amortization grows 1–3 points slower than revenue each year. Operating margin widens from 31.5% in 2026 to 35.9% in 2030. Free cash flow rises from $12.0B to $19.9B. We assume 95% of it funds buybacks, cutting the share count by 22% by 2030. That turns about 8% annual revenue growth into 17% annual EPS growth from 2027 to 2030.
 
 ### 3. The advertising miss is about timing, and our target does not depend on ads
 
@@ -115,7 +115,7 @@ Netflix launched streaming in 2007 and signed licensing deals with the major stu
 
 The past five years reshaped the business model. Netflix launched an ad-supported plan in 2022 and began its paid-sharing crackdown in 2023, converting borrowers into paying members. In 2025 it stopped reporting memberships quarterly and completed a 10-for-1 stock split.
 
-In December 2025, Netflix agreed to buy Warner Bros.' studios and HBO Max at an enterprise value of $82.7B. It walked away in February 2026, when Warner Bros. Discovery accepted Paramount Skydance's higher bid, and collected a $2.8B termination fee. Netflix raised US prices by about 10% on average in March 2026. In Q3 2026 it appointed new content leadership under Peter Rice and cut headcount.
+In December 2025, Netflix agreed to buy Warner Bros.' studios and HBO Max at an enterprise value of $82.7B. It walked away in February 2026, when Warner Bros. Discovery accepted Paramount Skydance's higher bid, and collected a $2.8B termination fee. Netflix raised US prices by about 10% on average in March 2026. In October 2026 it appointed new content leadership under Peter Rice and announced a headcount reduction.
 
 ### Management and governance
 
@@ -199,9 +199,9 @@ We forecast advertising revenue rising from $2.7B in 2026 to $6.9B in 2030, or 9
 
 ### Margins: content costs grow slower than revenue
 
-Operating margin expands about 1 point a year, from 31.5% in 2026 to 35.9% in 2030. Most of the gain comes from content. We grow content amortization 7.0% in 2027, easing to 5.5% by 2030, about 2–3 points below revenue growth each year. Content amortization falls from 36.3% of revenue in 2025 to 32.5% in 2030. That continues the pattern of 2023–2025, when amortization grew 5.4% a year against revenue growth of 12.7%. Live sports, about 5% of 2026 content spend, limit how far the ratio can fall.
+Operating margin expands about 1 point a year, from 31.5% in 2026 to 35.9% in 2030. Most of the gain comes from content. We grow content amortization 7.0% in 2027, easing to 5.5% by 2030, 1–3 points below revenue growth each year. Content amortization falls from 36.3% of revenue in 2025 to 32.5% in 2030. That continues the pattern of 2023–2025, when amortization grew 5.4% a year against revenue growth of 12.7%. Live sports, about 5% of 2026 content spend, limit how far the ratio can fall.
 
-Operating expenses fall from 19.0% of revenue in 2025 to 17.6% in 2030. General and administrative costs drop to 4.0% of revenue in 2027 after the fourth-quarter 2026 headcount reduction, the largest since 2022. Technology and development stays near 7.5–7.8% because of continued spending on ad technology and games. Gross margin rises from 48.5% in 2025 to 53.5% in 2030.
+Operating expenses fall from 19.0% of revenue in 2025 to 17.6% in 2030. General and administrative costs drop to 4.0% of revenue in 2027 after the headcount reduction announced in October 2026, the largest since 2022. Technology and development stays near 7.5–7.8% because of continued spending on ad technology and games. Gross margin rises from 48.5% in 2025 to 53.5% in 2030.
 
 ![Exhibit 7: Two charts: operating margin from FY2021A to FY2030E rising to 35.9% (CN vs consensus), and revenue growth vs content amortization growth from FY2022A to FY2030E](/images/nflx-exhibit-7.png)
 
@@ -217,7 +217,7 @@ We forecast free cash flow of $12.0B in 2026, in line with guidance, rising to $
 
 ### Capital allocation: about $64B of buybacks over 2027–2030
 
-We assume Netflix returns 95% of free cash flow through buybacks, in line with the 87–97% of 2023–2025. That totals $13.5B in 2026 and $63.9B across 2027–2030. We assume each debt maturity is refinanced at a 5.5% interest rate, so gross debt stays near $15.2B. That keeps Netflix inside its commitment to a solid investment-grade rating (Moody's A2, S&P A). Cash rises from $7.8B at the end of 2026 to $12.1B in 2030. Netflix had $22.3B of buyback authorization remaining after the third quarter of 2026.
+2026 buybacks total $13.5B, above free cash flow, of which $10.8B was completed in the first nine months. From 2027 we assume Netflix returns 95% of free cash flow through buybacks, in line with the 87–97% of 2023–2025, or $63.9B across 2027–2030. We assume each debt maturity is refinanced at a 5.5% interest rate, so gross debt stays near $15.2B. That keeps Netflix inside its commitment to a solid investment-grade rating (Moody's A2, S&P A). Cash rises from $7.8B at the end of 2026 to $12.1B in 2030. Netflix had $22.3B of buyback authorization remaining after the third quarter of 2026.
 
 ### CN vs consensus
 
@@ -251,7 +251,7 @@ Bloomberg's own WACC for Netflix is higher, at 12.1%. The gap comes from Bloombe
 
 We discount unlevered free cash flow for 2027–2030, using mid-year discounting, with a terminal value at the end of 2030. Free cash flow treats cash content spending as Netflix's real capital spending. Stock-based compensation is treated as a cost, not added back. Unlevered free cash flow rises from $13.4B in 2027 to $19.6B in 2030, or 28% of revenue.
 
-We assume 3.5% terminal growth, below the 4.88% risk-free rate. The terminal value equals 12.6x 2030 EBITDA, below the peer median of 17x trailing EBITDA. That suggests our terminal assumption is not aggressive. The terminal value makes up 80% of enterprise value, which is typical for a company still growing at 7–10%.
+We assume 3.5% terminal growth, below the 4.88% risk-free rate. The terminal value equals 12.6x 2030 EBITDA, close to the 12.0x peer median on 2027 estimates and below Netflix's own 13.1x today, for a business still growing about 7% in 2030. That suggests our terminal assumption is not aggressive. The terminal value makes up 80% of enterprise value, which is typical for a company still growing at 7–10%.
 
 Enterprise value is $279.5B at the end of 2026. Deducting $14.5B of debt and adding $7.8B of cash gives equity value of $272.8B. That is $66.17 per share on 4,123M diluted shares, or $65.41 discounted back to today.
 
