@@ -7,6 +7,8 @@ export const money = (n: number) =>
 /** Signed percent change from `base` to `target`, e.g. "+238%" or "−38%". */
 export const pctFrom = (target: number, base?: number) => {
   if (!base) return undefined;
-  const pct = (target / base - 1) * 100;
-  return `${pct >= 0 ? "+" : "−"}${Math.abs(pct).toFixed(0)}%`;
+  const rounded = Math.round((target / base - 1) * 100);
+  // Avoid "−0%" / "+0%" when the change rounds to zero.
+  if (rounded === 0) return "0%";
+  return `${rounded > 0 ? "+" : "−"}${Math.abs(rounded)}%`;
 };
